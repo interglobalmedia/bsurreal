@@ -151,7 +151,7 @@ Main Styles
   position: fixed;
   top: 0;
   left: 0;
-  background: url("img/rebecca-2.jpg") no-repeat center center fixed; 
+  background: url(../img/rebecca-2.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -221,7 +221,7 @@ of the iPad.
   margin: 0 auto;
   top: 0;
   left: 0;
-  background: url("/img/23hitchcock1-superjumbo.jpg") no-repeat center center fixed; 
+  background: url(../img/23hitchcock1-superjumbo.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -246,7 +246,7 @@ of the iPad.
   height: 100%;
   top: 0;
   left: 0;
-  background: url("../../img/pleasuregarden-1.jpg") no-repeat center center fixed; 
+  background: url(../img/pleasuregarden-1.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -392,7 +392,7 @@ fieldset {
     background: none;
     /* Set rules to fill background */
     min-height: 1080px;
-    min-width: 100%;
+    min-width: 73%;
     /* Set up proportionate scaling */
     width: auto;
     height: 100%;

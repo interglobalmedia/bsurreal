@@ -1,0 +1,685 @@
+/*******************************
+Styles for Index and Terms Pages
+********************************/
+
+/***********************
+GENERAL: Base Styles
+************************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Federo, sans-serif;
+  background: #919191;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+li {
+  list-style-type: none;
+}
+img {
+  border: none;
+}
+
+p {
+  margin: 0 5%;
+  color: #fff;
+}
+
+/***********************
+General Navigation
+************************/
+
+nav {
+  background: transparent;
+  padding: 10px 0;
+  margin: 20px 0 25px;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding-bottom: 1%;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-weight: 800;
+}
+
+.hangingindent {
+  padding-left: 0;
+  text-indent: -22px;
+}
+
+/* General Nav Link */
+
+nav a,
+nav a:visited,
+nav a:hover {
+  text-decoration: none;
+}
+
+/* Accept Reject Radio Buttons */
+
+input[type=radio] {
+  vertical-align: bottom;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  font-size: 2em;
+}
+
+input[type=radio] + label {
+  margin-left: 0;
+  line-height: 1.5em;
+  vertical-align: middle;
+}
+
+/**********************
+Pseudo Buttons 
+(Page Link classes)
+***********************/
+
+#pseudo-button-play {
+  float: left;
+  margin-left: 30%;
+}
+
+#psuedo-button-exit {
+  float: right;
+  margin-right: 20%;
+}
+
+form #pseudo-button,
+form #pseudo-button-cookies,
+form #pseudo-button-play,
+form #pseudo-button-exit {
+  background: #111;
+  font-size: 18px;
+  color: #aaa;
+  width: 80px;
+  height: 30px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+  
+form #pseudo-button-play,
+form #pseudo-button-exit {
+  display: inline-block;
+}
+
+form #pseudo-button {
+  float: right;
+  display: block;
+  margin: 0 0 0 30%;
+}
+
+form #pseudo-button-cookies {
+  margin: 0 0 0 32%;
+}
+
+/* Class related to Page Interactivity */
+
+.expand {
+  display: block !important;
+}
+/***********************
+Headings
+************************/
+
+h1 {
+  font-size: 72px;
+  font-family: 'Joti One', cursive;
+  color: #aaa;
+  margin: 2.5% 0 0;
+  text-align: center;
+  text-decoration: outline;
+  -webkit-text-stroke: 1px black;
+  color: white;
+  text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  opacity: 0.7;
+}
+
+h1.terms {
+  margin-top: 0;
+}
+
+h3 {
+  color: #b9c104;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+/***********************
+Main Styles
+************************/
+
+/* Background Body Styling for Cross-Fade */
+
+.main-body {
+  /* Set rules to fill background */
+  min-height: 1080px;
+  min-width: 73%;
+  /* Set up proportionate scaling */
+  width: auto;
+  height: 100%;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("img/rebecca-2.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  webkit-transition: opacity 5s ease-in-out;
+  -moz-transition: opacity 5s ease-in-out;
+  -o-transition: opacity 5s ease-in-out;
+  transition: opacity 5s ease-in-out;
+  z-index: -1;
+}
+
+/* Cross Fade */
+
+/*************************************************
+Rebecca Img Proportion Calculation 
+Relative to Pleasure Garden img:
+
+I found when working with determining the
+height and width percentaages for these
+two images. that I had to take the larger
+of the two (proportionately and 
+absolutely) and make it the 100% width 
+and 100% height to work off of. That was
+Pleasure Garden. Then I had to figure out
+what were the height and width percentages
+of The Rebecca Image relative to the
+Pleasure Garden Image dimensions:
+
+Pleasure Garden Dimensions:
+5906px W * 4540px H;
+Rebecca2 Dimensions:
+1920px W * 1080px H;
+
+First I went by height because I was already
+working with 100% height off of Rebecca and
+setting it as the min-height:
+5906    n
+____ = ____
+
+4540    1080
+
+n = 1405
+
+1405px is what % of 1920px? = 73%
+That's how I came up with the width %
+for the Rebecca-2.jpg img. That way, I
+maintained the proportion of both images
+on all widths. Of course I had to call 
+the max-width: 479px and min-width:480px
+media queries, as well as the max-width: 1024px
+and min-width: 1025px in order to complete
+the process. However, if I were to put this
+out on the market, I would state on the
+App Store that this was only for tablet screens
+and larger starting with the landscape dimensions
+of the iPad.
+**************************************************/
+
+#cross-fade {
+  position: relative;
+  /* Set rules to fill background */
+  min-height: 1080px;
+  min-width: 79%;
+  /* Set up proportionate scaling */
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  background: url("/img/23hitchcock1-superjumbo.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  webkit-transition: opacity 6s ease-in-out;
+  -moz-transition: opacity 6s ease-in-out;
+  -o-transition: opacity 6s ease-in-out;
+  transition: opacity 6s ease-in-out;
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  -transition-delay: 1s;
+}
+
+#cross-fade img {
+  position: fixed;
+  /* Set rules to fill background */
+  min-height: 1080px;
+  min-width: 100%;
+  /* Set up proportionate scaling */
+  width: auto;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../../img/pleasuregarden-1.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  webkit-transition: opacity 7s ease-in-out;
+  -moz-transition: opacity 7s ease-in-out;
+  -o-transition: opacity 7s ease-in-out;
+  transition: opacity 7s ease-in-out;
+  -webkit-transition-delay: 3s;
+  -moz-transition-delay: 3s;
+  -o-transition-delay: 3s;
+  -transition-delay: 3s;
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+  opacity:1;
+  }
+  12% {
+  opacity: 1;
+  }
+  26% {
+  opacity: 0.7;
+  }
+  55% {
+  opacity: 0;
+  }
+  70% {
+  opacity: 0.7;
+  }
+  85% {
+  opacity: 0.7;
+  }
+  100% {
+  opacity: 0;
+  }
+}
+
+#cross-fade img.top {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 12s;
+animation-direction: alternate;
+}
+
+#cross-fade img.middle {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 12s;
+animation-direction: alternate;
+}
+
+#cross-fade img.top {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 14s;
+animation-direction: alternate;
+}
+
+/* Fieldset Stylings */
+
+/* Radio Button Styling on Terms Page */
+
+fieldset {
+  border: none;
+  color: #b9c104;
+  margin-bottom: 5px;
+}
+
+input {
+  margin: 1%;
+}
+
+.cc_banner .cc_container .cc_container--open {
+  z-index: 1000;
+}
+
+/* @media queries */
+
+@media screen and (min-width:320px) and (max-width: 374px) {
+
+  /* index.html page & terms.html */
+
+  .main-body,
+  #cross-fade,
+  #cross-fade img {
+    padding: 150px 0;
+    width: 100%;
+    max-height: 350px;
+    background: #919191;
+  }
+
+  #overlay {
+    display: none;
+  }
+
+  #overlay p {
+    display: block;
+  }
+
+  #overlay-mobile,
+  #overlay-mobile-terms {
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:block;
+    text-align: center;/* This centers everything within the overlay.*/
+    margin: 0 20%;
+  }
+
+  #overlay-mobile h1,
+  #overlay-mobile-terms h1 {
+    margin: 0 1.5% 0 -38.5%;
+    font-size: 60px;
+  }
+
+  form #pseudo-button-cookies {
+    display: none;
+  }
+
+  form #pseudo-button {
+    margin: 25% 56% 15% 0;
+  }
+
+  #mobile-pseudo {
+    background: #111;
+    font-size: 18px;
+    color: #aaa;
+    width: 80px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5% 38.5% 12.5% 0;
+  }
+
+  #overlay-mobile p {
+    /*font-size: 12px;*/
+    margin: 10% 5% 0 -34%;
+    padding: 20% 20% 0;
+    color: #aaa;
+    display: none;
+  }
+
+  #overlay-mobile-terms p {
+    font-size: 14px;
+    margin: 2.5% 5% 0 -34%;
+    padding: 0 20% 0;
+    color: #aaa;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 479px) {
+  
+  .main-body,
+  #cross-fade,
+  #cross-fade img {
+    padding: 150px 0;
+    width: 100%;
+    height: 350px;
+    background: #919191;
+  }
+
+  #overlay {
+    display: none;
+  }
+
+  #overlay p {
+    display: block;
+  }
+
+  #overlay-mobile,
+  #overlay-mobile-terms {
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:block;
+    text-align:center;/* This centers everything within the overlay.*/
+    margin: 0 20%;
+  }
+
+  #overlay-mobile h1,
+  #overlay-mobile-terms h1 {
+    margin: 0 1.5% 0 -38.5%;
+    font-size: 60px;
+  }
+
+  form #pseudo-button {
+    margin: 30% 56% 15% 0;
+  }
+
+  #mobile-pseudo {
+    background: #111;
+    font-size: 18px;
+    color: #aaa;
+    width: 80px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5% 38.5% 12.5% 0;
+  }
+
+  #overlay-mobile p {
+    margin: 10% 5% 0 -34%;
+    padding: 20% 20% 0;
+    color: #aaa;
+    display: none;
+  }
+
+  #overlay-mobile-terms p {
+    font-size: 16px;
+    margin: 2.5% 5% 0 -34%;
+    padding: 0 20% 0;
+    color: #aaa;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) {
+
+  #overlay {
+    display: none;
+  }
+
+  .main-body,
+  #cross-fade,
+  #cross-fade img {
+    padding: 150px 0;
+    width: 100%;
+    height: 350px;
+    background: #919191;
+  }
+
+  #overlay p {
+    display: block;
+  }
+
+  #overlay-mobile {
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:block;
+    text-align:center;/* This centers everything within the overlay.*/
+    margin: 0 20%;
+  }
+
+  #overlay-mobile h1 {
+    margin: 0 1.5% 0 -38.5%;
+    font-size: 60px;
+  }
+
+  #overlay-mobile p {
+    font-size: 16px;
+    margin: 0 5% 0 -34%;
+    padding: 10% 20% 0;
+    color: #aaa;
+  }
+
+  form #pseudo-button {
+    margin: 30% 60% 70% 0;
+  }
+
+  #mobile-pseudo {
+    background: #111;
+    font-size: 18px;
+    color: #aaa;
+    width: 80px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2.5% 38.5% 12.5% 0;
+  }
+}
+@media screen and (min-width: 600px) {
+
+   #overlay-mobile p {
+    font-size: 21px;
+    margin: 0 5% 0 -34%;
+    padding: 20% 20% 0;
+    color: #aaa;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  #pseudo-button {
+    margin: 20% 40% 70% 0;
+  }
+
+   #overlay-mobile p {
+    font-size: 21px;
+    margin: 0 5% 0 -34%;
+    padding: 10% 20% 0;
+    color: #aaa;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  #overlay-mobile p {
+    font-size: 21px;
+    margin: 0 5% 0 -34%;
+    padding: 5% 20% 0;
+    color: #aaa;
+  }
+
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+
+  #cross-fade {
+    /* Set rules to fill background */
+    min-height: 100%;
+    max-width: 73%;
+  }
+  #cross-fade img {
+    /* Set rules to fill background */
+    min-height: 100%;
+    max-width: 100%;
+  }
+
+  #pseudo-button {
+    margin: 10% 40% 45% 0;
+  }
+
+  #overlay-mobile p {
+    font-size: 21px;
+    margin: 0 5% 0 -34%;
+    padding: 0 20% 0;
+    color: #aaa;
+  }
+}
+@media screen and (min-width: 1025px) {
+
+  #overlay-mobile,
+  #overlay-mobile h1,
+  #overlay-mobile p {
+    display: none;
+  }
+
+  #overlay {
+    background:rgba(0,0,0,0);
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    display:block;
+    text-align:center;/* This centers everything within the overlay. */
+    margin: 2.5% auto 2.5%;
+  }
+
+  #overlay p {
+    display: block;
+   color: #fff;
+   font-size: 18px;
+   text-align: center;
+   letter-spacing: 0.25rem;
+  }
+
+  h1 {
+    font-size: 72px;
+  }
+
+  .main-body {
+    background: no-repeat;
+    background: none;
+    /* Set rules to fill background */
+    min-height: 1080px;
+    min-width: 100%;
+    /* Set up proportionate scaling */
+    width: auto;
+    height: 100%;
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0; 
+  }
+  .main-body,
+  #cross-fade,
+  #cross-fade img{
+    padding: 0;
+    background: none;
+  }
+  form #pseudo-button {
+    margin: 0 40% 45% 0;
+  }
+}

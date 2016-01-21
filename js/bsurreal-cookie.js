@@ -72,9 +72,18 @@ function checkCookie() {
 $(document).ready(function() {
   // read the cookie
   var user=getCookie("username");
-  var cookieVal=Cookies.get(user);
+  var cookieVal=getCookie(user);
   // if the cookie exists, update the heading
   if (user != "" && user != null) {
     $('h3').text('Welcome Back ' + user + '.' + ' Enjoy the game!');
   }
+});
+
+$('.submit-button').on('click', function() {
+    // get value from input.
+    var username = $('.name-field').val();
+    // Update heading
+    $('h3').text('Hi Stranger ', + user + '!');
+    // Set cookie to save name
+    Cookies.set('username', username);
 });

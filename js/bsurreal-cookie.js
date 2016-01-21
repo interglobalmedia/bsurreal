@@ -79,11 +79,14 @@ $(document).ready(function() {
   }
 });
 
-$('.submit-button').on('click', function() {
+/*$('#submit-name').on('click', function() {
     // get value from input.
-    var username = $('.name-field').val();
+    var user=getCookie("username");
+    var cookieVal=getCookie(user);
+    user = $('#name-field').val();
     // Update heading
-    $('h3').text('Hi Stranger ', + user + '!');
+    if (user != "" && user != null) {
+    $('h3').text('Hi ' + user + '!');
     // Set cookie to save name
-    Cookies.set('username', username);
-});
+    setCookie('username', user, 30);
+});*/

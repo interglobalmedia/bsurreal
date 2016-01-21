@@ -73,65 +73,6 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* Accept Reject Radio Buttons */
-
-input[type=radio] {
-  vertical-align: bottom;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-  font-size: 2em;
-}
-
-input[type=radio] + label {
-  margin-left: 0;
-  line-height: 1.5em;
-  vertical-align: middle;
-}
-
-/**********************
-Pseudo Buttons 
-(Page Link classes)
-***********************/
-
-#pseudo-button-play {
-  float: left;
-  margin-left: 30%;
-}
-
-#psuedo-button-exit {
-  float: right;
-  margin-right: 20%;
-}
-
-form #pseudo-button,
-form #pseudo-button-cookies,
-form #pseudo-button-play,
-form #pseudo-button-exit {
-  background: #111;
-  font-size: 18px;
-  color: #aaa;
-  width: 80px;
-  height: 30px;
-  outline: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-  
-form #pseudo-button-play,
-form #pseudo-button-exit {
-  display: inline-block;
-}
-
-form #pseudo-button {
-  float: right;
-  display: block;
-  margin: 0 0 0 30%;
-}
-
-form #pseudo-button-cookies {
-  margin: 0 0 0 32%;
-}
-
 /* Class related to Page Interactivity */
 
 .expand {
@@ -159,14 +100,38 @@ h1 {
   opacity: 0.7;
 }
 
-h1.terms {
+h1.intro {
   margin-top: 0;
 }
 
+h2 {
+  margin-bottom: 80px;
+  padding-top: 0;
+}
+
 h3 {
-  color: #b9c104;
+  color: #be5b70;
   letter-spacing: 0.1rem;
+  margin: 20px 0 0;
+}
+
+.intro {
+  max-width: 600px;
+  width: 100%;
+  margin: 40% auto 0;
+}
+
+#intro p {
+  margin: 70% auto 0;
+  color: #111;
+}
+
+footer { 
   margin: 0;
+}
+
+footer a {
+  color: #be5b70;
 }
 
 /***********************
@@ -354,17 +319,14 @@ fieldset {
   margin-bottom: 5px;
 }
 
-input {
-  margin: 1%;
-}
-
-.cc_banner .cc_container .cc_container--open {
-  z-index: 1000;
-}
-
 /* @media queries */
 
 @media screen and (min-width:320px) and (max-width: 374px) {
+
+  h2 {
+    margin-bottom: 120px;
+    color: #be5b70;
+  }
 
   /* index.html page & terms.html */
 
@@ -373,234 +335,37 @@ input {
   #cross-fade img {
     padding: 150px 0;
     width: 100%;
-    max-height: 350px;
+    max-height: 73%;
     background: #919191;
-  }
-
-  #overlay {
-    display: none;
-  }
-
-  #overlay p {
-    display: block;
-  }
-
-  #overlay-mobile,
-  #overlay-mobile-terms {
-    padding: 0;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display:block;
-    text-align: center;/* This centers everything within the overlay.*/
-    margin: 0 20%;
-  }
-
-  #overlay-mobile h1,
-  #overlay-mobile-terms h1 {
-    margin: 0 1.5% 0 -38.5%;
-    font-size: 60px;
-  }
-
-  form #pseudo-button-cookies {
-    display: none;
-  }
-
-  form #pseudo-button {
-    margin: 25% 56% 15% 0;
-  }
-
-  #mobile-pseudo {
-    background: #111;
-    font-size: 18px;
-    color: #aaa;
-    width: 80px;
-    height: 30px;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 5% 38.5% 12.5% 0;
-  }
-
-  #overlay-mobile p {
-    /*font-size: 12px;*/
-    margin: 10% 5% 0 -34%;
-    padding: 20% 20% 0;
-    color: #aaa;
-    display: none;
-  }
-
-  #overlay-mobile-terms p {
-    font-size: 14px;
-    margin: 2.5% 5% 0 -34%;
-    padding: 0 20% 0;
-    color: #aaa;
-    display: none;
   }
 }
 
 @media screen and (min-width: 375px) and (max-width: 479px) {
+
+  h2 {
+    color: #be5b70;
+  }
   
   .main-body,
   #cross-fade,
   #cross-fade img {
     padding: 150px 0;
     width: 100%;
-    height: 350px;
+    max-height: 73%;
     background: #919191;
-  }
-
-  #overlay {
-    display: none;
-  }
-
-  #overlay p {
-    display: block;
-  }
-
-  #overlay-mobile,
-  #overlay-mobile-terms {
-    padding: 0;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display:block;
-    text-align:center;/* This centers everything within the overlay.*/
-    margin: 0 20%;
-  }
-
-  #overlay-mobile h1,
-  #overlay-mobile-terms h1 {
-    margin: 0 1.5% 0 -38.5%;
-    font-size: 60px;
-  }
-
-  form #pseudo-button {
-    margin: 30% 56% 15% 0;
-  }
-
-  #mobile-pseudo {
-    background: #111;
-    font-size: 18px;
-    color: #aaa;
-    width: 80px;
-    height: 30px;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 5% 38.5% 12.5% 0;
-  }
-
-  #overlay-mobile p {
-    margin: 10% 5% 0 -34%;
-    padding: 20% 20% 0;
-    color: #aaa;
-    display: none;
-  }
-
-  #overlay-mobile-terms p {
-    font-size: 16px;
-    margin: 2.5% 5% 0 -34%;
-    padding: 0 20% 0;
-    color: #aaa;
-    display: none;
   }
 }
 
 @media screen and (min-width: 480px) {
 
-  #overlay {
-    display: none;
-  }
-
-  .main-body,
-  #cross-fade,
-  #cross-fade img {
-    padding: 150px 0;
-    width: 100%;
-    height: 350px;
-    background: #919191;
-  }
-
-  #overlay p {
-    display: block;
-  }
-
-  #overlay-mobile {
-    padding: 0;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display:block;
-    text-align:center;/* This centers everything within the overlay.*/
-    margin: 0 20%;
-  }
-
-  #overlay-mobile h1 {
+  h1 {
     margin: 0 1.5% 0 -38.5%;
     font-size: 60px;
   }
 
-  #overlay-mobile p {
-    font-size: 16px;
-    margin: 0 5% 0 -34%;
-    padding: 10% 20% 0;
-    color: #aaa;
+  h2 {
+    color: #be5b70;
   }
-
-  form #pseudo-button {
-    margin: 30% 60% 70% 0;
-  }
-
-  #mobile-pseudo {
-    background: #111;
-    font-size: 18px;
-    color: #aaa;
-    width: 80px;
-    height: 30px;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 2.5% 38.5% 12.5% 0;
-  }
-}
-@media screen and (min-width: 600px) {
-
-   #overlay-mobile p {
-    font-size: 21px;
-    margin: 0 5% 0 -34%;
-    padding: 20% 20% 0;
-    color: #aaa;
-  }
-}
-
-@media screen and (min-width: 768px) {
-
-  #pseudo-button {
-    margin: 20% 40% 70% 0;
-  }
-
-   #overlay-mobile p {
-    font-size: 21px;
-    margin: 0 5% 0 -34%;
-    padding: 10% 20% 0;
-    color: #aaa;
-  }
-
-}
-
-@media screen and (min-width: 992px) {
-
-  #overlay-mobile p {
-    font-size: 21px;
-    margin: 0 5% 0 -34%;
-    padding: 5% 20% 0;
-    color: #aaa;
-  }
-
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
@@ -615,45 +380,8 @@ input {
     min-height: 100%;
     max-width: 100%;
   }
-
-  #pseudo-button {
-    margin: 10% 40% 45% 0;
-  }
-
-  #overlay-mobile p {
-    font-size: 21px;
-    margin: 0 5% 0 -34%;
-    padding: 0 20% 0;
-    color: #aaa;
-  }
 }
 @media screen and (min-width: 1025px) {
-
-  #overlay-mobile,
-  #overlay-mobile h1,
-  #overlay-mobile p {
-    display: none;
-  }
-
-  #overlay {
-    background:rgba(0,0,0,0);
-    width:100%;
-    height:100%;
-    position: absolute;
-    top:0;
-    left:0;
-    display:block;
-    text-align:center;/* This centers everything within the overlay. */
-    margin: 2.5% auto 2.5%;
-  }
-
-  #overlay p {
-    display: block;
-   color: #fff;
-   font-size: 18px;
-   text-align: center;
-   letter-spacing: 0.25rem;
-  }
 
   h1 {
     font-size: 72px;
@@ -679,7 +407,8 @@ input {
     padding: 0;
     background: none;
   }
-  form #pseudo-button {
-    margin: 0 40% 45% 0;
+
+  #intro p {
+    color: #fff;
   }
 }

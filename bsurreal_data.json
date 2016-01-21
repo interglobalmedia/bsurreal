@@ -1,0 +1,303 @@
+[
+  {
+    "name"     : "bsurreal Movie Trivia Quiz",
+    "category" : "fantasy", 
+    "question" : "Name of this movie?",
+    "choices" :[
+    {"id" : 0, "text" :"Jewel of The Nile"},
+    {"id" : 1, "text" :"The Pink Panther"},
+    {"id" : 2, "text" :"The Red Shoes"},
+    {"id" : 3, "text" :"Fantasia"}
+    ],
+  "correct"  : 2,
+  "trivia" : "Did you know that the movie is responsible for her meeting 
+                and marrying her husband Ludovic Kennedy? He said that when he saw her in 
+                the movie, he immediately knew that she was going to be the girl he was going to marry. 
+                He actively pursued her, and married her two years later, in February 1950, at the 
+                Chapel Royal in London's Hampton Court Palace!"
+  },
+  {
+    "category" : "fantasy",
+    "question" : "Name of the actress?",
+    "choices" :[
+    {"id" : 0, "text" :"Moira Shearer"},
+    {"id" : 1, "text" :"Maureen O'Hara"},
+    {"id" : 2, "text" :"Rosalind Russell"},
+    {"id" : 3, "text" :"Katherine Hepburn"}
+    ],
+  "correct"  : 0,
+  "trivia" : "Did you know that Moira Shearer got badly sunburned and developed blisters on her back 
+               on her first day of shooting this movie? Later on she also wrenched her neck when told 
+               to leap from a window, and received a scratch that turned into an abscess. Shearer often 
+               found herself being suspended in a harness for up to eight hours while being buffetted by 
+               wind machines. What rough going!"
+  },
+  {
+    "category" : "fantasy",
+    "question" : "The director?",
+    "choices" :[
+    {"id" : 0, "text" :"Elia Kazan"},
+    {"id" : 1, "text" :"Ernst Lubitsch"},
+    {"id" : 2, "text" :"Preston Sturges"},
+    {"id" : 3, "text" :"Michael Powell and Emeric Pressburger"}
+    ],
+  "correct"  : 3,
+  "trivia" : "Did you know that the title ballet sequence took 6 weeks to shoot and used over 120 paintings 
+               from famous German set designer Hein Heckroth?"
+  },
+  {
+    "category" : "fantasy",
+    "question" : "Year it was made?",
+    "choices" :[
+    {"id" : 0, "text" :"1940"},
+    {"id" : 1, "text" :"1948"},
+    {"id" : 2, "text" :"1952"},
+    {"id" : 3, "text" :"1939"}
+    ],
+  "correct"  : 1,
+  "trivia" : "Did you know that in Hans Christian Anderson's original fairy tale, the ballerina had her 
+               feet hacked off by a woodsman to stop her from dancing?"
+  },
+  {
+    "category" : "future noir",
+    "question" : "What is the name of this movie?",
+    "choices" :[
+    {"id" : 0, "text" :"Raiders of The Lost Ark"},
+    {"id" : 1, "text" :"101 Dalmatians"},
+    {"id" : 2, "text" :"Persona"},
+    {"id" : 3, "text" :"Blade Runner"}
+    ],
+  "correct"  : 3,
+  "trivia" : "Did you know that Daryl Hannah wasn't the first choice for the role of Pris? 
+               Debbie Harrie of Blondie fame was the first choice. Supposedly Daryl Hannah still has 
+               the blond wig she wore for the role."
+  },
+  {
+    "category" : "future noir",
+    "question" : "What is the name of the actress?",
+    "choices" :[
+    {"id" : 0, "text" :"Jennifer Aniston"},
+    {"id" : 1, "text" :"Marilyn Monroe"},
+    {"id" : 2, "text" :"Daryl Hannah"},
+    {"id" : 3, "text" :"Margot Robbie"}
+    ],
+  "correct"  : 2,
+  "trivia" : "Did you know that Daryl Hannah wasn't the first choice for the role of Pris? 
+               Debbie Harrie of Blondie fame was the first choice. Supposedly Daryl Hannah still has 
+               the blond wig she wore for the role."
+  },
+  {
+    "category" : "future noir",
+    "question" : "Who directed this film?",
+    "choices" :[
+    {"id" : 0, "text" :"Ridley Scott"},
+    {"id" : 1, "text" :"Woodie Allen"},
+    {"id" : 2, "text" :"Robert Altman"},
+    {"id" : 3, "text" :"Francis Ford Coppola"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "future noir",
+    "question" : "What year was it made?",
+    "choices" :[
+    {"id" : 0, "text" :"1992"},
+    {"id" : 1, "text" :"1982"},
+    {"id" : 2, "text" :"1976"},
+    {"id" : 3, "text" :"1989"}
+    ],
+  "correct" : 1
+  },
+  {
+    "category" : "fantasy",
+    "question" : "Do you know the name of this movie?",
+    "choices" :[
+    {"id" : 0, "text" :"Snow White"},
+    {"id" : 1, "text" :"Princess Bride"},
+    {"id" : 2, "text" :"The Legend of Sleepy Hollow"},
+    {"id" : 3, "text" :"Sleepy Hollow"}
+    ],
+  "correct" : 3
+  },
+  {
+    "category" : "fantasy",
+    "question" : "Writer of the original story?",
+    "choices" :[
+    {"id" : 0, "text" :"Washington Irving"},
+    {"id" : 1, "text" :"Leo Tolstoy"},
+    {"id" : 2, "text" :"Albert Camus"},
+    {"id" : 3, "text" :"Herman Melville"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "fantasy",
+    "question" : "Name of the female protagonist?",
+    "choices" :[
+    {"id" : 0, "text" :"Priscilla"},
+    {"id" : 1, "text" :"Mary"},
+    {"id" : 2, "text" :"Katrina"},
+    {"id" : 3, "text" :"Barbara"}
+    ],
+  "correct" : 2
+  },
+  {
+    "category" : "fantasy",
+    "question" : "Who played the headless horseman?",
+    "choices" :[
+    {"id" : 0, "text" :"Christopher Walken"},
+    {"id" : 1, "text" :"Robert DeNiro"},
+    {"id" : 2, "text" :"Harvey Keitel"},
+    {"id" : 3, "text" :"Christian Bale"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "fantasy",
+    "question" : "What was the name of the main character?",
+    "choices" :[
+    {"id" : 0, "text" :"Billy Budd"},
+    {"id" : 1, "text" :"Brom Bones"},
+    {"id" : 2, "text" :"Abraham Van Brunt"},
+    {"id" : 3, "text" :"Ichabod Crane"}
+    ],
+  "correct" : 3
+  },
+  {
+    "fantasy" :,
+    "question" : "What was his actual occupation?",
+    "choices" :[
+    {"id" : 0, "text" :"Shoe Maker"},
+    {"id" : 1, "text" :"Schoolmaster"},
+    {"id" : 2, "text" :"Blacksmith"},
+    {"id" : 3, "text" :"Detective"}
+    ],
+  "correct" : 1
+  },
+  {
+    "category" : "mystery",
+    "question" : "Name of this movie?",
+    "choices" :[
+    {"id" : 0, "text" :"Gigi"},
+    {"id" : 1, "text" :"Gaslight"},
+    {"id" : 2, "text" :"The Manchurian Candidate"},
+    {"id" : 3, "text" :"Psycho"}
+    ],
+  "correct" : 3
+  },
+  {
+    "category" : "mystery",
+    "question" : "Who wrote the musical score?",
+    "choices" :[
+    {"id" : 0, "text" :"Bernard Hermann"},
+    {"id" : 1, "text" :"Marilyn Monroe"},
+    {"id" : 2, "text" :"Daryl Hannah"},
+    {"id" : 3, "text" :"Margot Robbie"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "mystery",
+    "question" : "The director?",
+    "choices" :[
+    {"id" : 0, "text" :"Robert Redford"},
+    {"id" : 1, "text" :"Alfred Hitchcock"},
+    {"id" : 2, "text" :"Orson Welles"},
+    {"id" : 3, "text" :"Billy Wilder"}
+    ],
+  "correct" : 1
+  },
+  {
+    "category" : "mystery",
+    "question" : "Who wrote the original novel?",
+    "choices" :[
+    {"id" : 0, "text" :"Margaret Mitchell"},
+    {"id" : 1, "text" :"Robert Bloch"},
+    {"id" : 2, "text" :"Harper Lee"},
+    {"id" : 3, "text" :"E. B. White"}
+    ],
+  "correct" : 1
+  },
+  {
+    "category" : "mystery",
+    "question" : "Name of this movie?",
+    "choices" :[
+    {"id" : 0, "text" :"The Night of the Hunter"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "mystery",
+    "question" : "Who wrote the original novel?",
+    "choices" :[
+    {"id" : 0, "text" :"Davis Grubb"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "mystery",
+    "question" : "Who was the cinematographer?",
+    "choices" :[
+    {"id" : 0, "text" :"Stanley Cortez"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "mystery",
+    "question" : "The director?",
+    "choices" :[
+    {"id" : 0, "text" :"Charles Laughton"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "mystery",
+    "question" : "Who played the lead male role?",
+    "choices" :[
+    {"id" : 0, "text" :"Robert Mitchum"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "mystery",
+    "question" : "Who played the female lead?",
+    "choices" :[
+    {"id" : 0, "text" :"Shelley Winters"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "mystery",
+    "question" : "Name two other actors who had been considered 
+                 for the male lead before final casting took place.",
+    "choices" :[
+    {"id" : 0, "text" :"John Carradine and Laurence Olivier"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "mystery",
+    "question" : "Who was the screenwriter?",
+    "choices" :[
+    {"id" : 0, "text" :"James Agee"}
+    ], 
+  "correct" : 0
+  },
+  {
+    "category" : "mystery",
+    "question" : "Which actor and actress 
+                  were initially considered for the two adult leads?",
+    "choices" :[
+    {"id" : 0, "text" :"Gary Cooper and Betty Grable"}
+    ],
+  "correct" : 0
+  },
+  {
+    "category" : "mystery",
+    "question" : "What was the name of the male 'antagonist' in the movie?",
+    "choices" :[
+    {"id" : 0, "text" :"Harry Powell"}
+    ],
+  "correct" : 0
+  }
+]

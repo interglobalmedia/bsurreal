@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSurreal</title>
+    <link href='https://fonts.googleapis.com/css?family=Federo|Asul:400,700|Joti+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/still-slider.css">
+    <link rel="stylesheet" type="text/css" href="css/dark-bottom.css">
+  </head>
+  <body onload="checkCookie()">
+    <h1>bsurreal</h1>
+    <h2> an interactive movie trivia game</h2>
+    <nav>
+      <div class="mobile-nav">
+        <div class="menu-btn" id="menu-btn">
+          <div></div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div id="menu" class="responsive-menu menu">
+          <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+          <input type="checkbox" id="tm">
+          <ul class="main-menu clearfix">
+            <li>
+              <a href="still-slider.html">Mystery</a>
+            </li>
+            <li>
+              <a href="still-slider.html">Fantasy</a>
+            </li>
+            <li>
+              <a href="still-slider.html">Future Noir</a>
+            </li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="index.html">Exit</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <p>
+        This site uses cookies. Please read our <a href="terms.html">Terms and Privacy Policies</a> before starting to play.
+      </p>
+      <br><br>
+      <div id="quiz">
+        <h2>bsurreal FAQs</h2>
+        <ol>
+          <li class="hangingindent">&#186; The game starts at the page you enter into from the Privacy/Terms and Conditions Page. To access the beginning of the game, click <a href="slider.html">here.</a></li>
+          <br>
+          <li class="hangingindent">&#186; Each time after you answer a question, a line of text will return moving your question location forward 1 number. For example, if you have just started the game and have only answered one question, you will be prompted with "Question 1 of X". After answering two questions, you will be prompted with "Question 2 of X", and so on.</li>
+          <br>
+          <li class="hangingindent">&#186; When you are done answering the questions assigned to your page location, click on the "next round" button. It will take you to the next round of questions.</li>
+          <br>
+          <li class="hangingindent">&#186; When you are done with the quiz portion of the games, you can continue onto the "Did you know?" portion of bsurreal.</li>
+          <br>
+        </ol>
+      </div>
+    </section>
+    <footer class="game-page">
+      <p>&copy; 2015 bsurreal All Rights Reserved.</p>
+      <li><a href="#" class="scrollToTop"></a></li>
+      <li><a href="faqs.html">Terms</a></li>
+      <li><a href="faqs.html">Privacy</a></li>
+      <div class="cc_banner-wrapper">
+        <div class="cc_banner cc_container cc_container--open">
+        <a class="cc_btn">Got it!</a>
+        <p class="cc_message">This website uses cookies to ensure you get the best experience on our website. <a class="cc_more_info" href="faqs.html">Learn More</a></p>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <script src="js/bsurreal-cookie.js"></script>
+    <script src="js/hamburger.js"></script>
+  </body>
+</html>

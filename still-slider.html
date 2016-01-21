@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSurreal</title>
+    <link href='https://fonts.googleapis.com/css?family=Federo|Asul:400,700|Joti+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/still-slider.css">
+    <link rel="stylesheet" type="text/css" href="css/dark-bottom.css">
+  </head>
+  <body onload="checkCookie()">
+    <h1>bsurreal</h1>
+    <h2>an interactive movie trivia game</h2>
+    <nav>
+      <div class="mobile-nav">
+        <div class="menu-btn" id="menu-btn">
+          <div></div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div id="menu" class="responsive-menu menu">
+          <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+          <input type="checkbox" id="tm">
+          <ul class="main-menu clearfix">
+            <li>
+              <a href="still-slider.html">Mystery</a>
+            </li>
+            <li>
+              <a href="still-slider.html">Fantasy</a>
+            </li>
+            <li>
+              <a href="still-slider.html">Future Noir</a>
+            </li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="index.html">Exit</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="slide-wrapper">
+      <input type="button" id="imageDescriptionPrev" value="<">
+      <input type="button" id="imageDescriptionNext" value=">">
+      <div id="container">
+        <div id="slideshowImage"><img src='img/0Red-Shoes-1198.jpg' width='600' height='400' /></div>
+      </div>
+      <div id="imageDescription">This is Moira Shearer in The Red Shoes! Did you know that the movie is responsible for her meeting and marrying her husband Ludovic Kennedy? He said that when he saw her in the movie, he immediately knew that she was going to be the girl he was going to marry. He actively pursued her, and married her two years later, in February 1950, at the Chapel Royal in London's Hampton Court Palace!</div>
+    </div>
+    <h3>
+      Hi! Try to answer the questions below to find out how strong your movie knowledge base is!
+    </h3>
+    <div>
+      <h2 id="quiz_status"></h2>
+      <div id="quiz"></div>
+    </div>
+    <footer class="game-page">
+      <p>&copy; 2015 bsurreal All Rights Reserved.</p>
+      <li><a href="#" class="scrollToTop"></a></li>
+      <li><a href="faqs.html">Terms</a></li>
+      <li><a href="faqs.html">Privacy</a></li>
+      <div class="cc_banner cc_container cc_container--open">
+        <a class="cc_btn">Got it!</a>
+        <p class="cc_message">This website uses cookies to ensure you get the best experience on our website. <a class="cc_more_info" href="faqs.html">Learn More</a></p>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <script src="js/bsurreal-cookie.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/still-slider.js"></script>
+    <script src="js/quiz.js"></script>
+  </body>
+</html>

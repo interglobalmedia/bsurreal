@@ -1,0 +1,770 @@
+/***********************
+GENERAL: Base Styles
+************************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Federo, sans-serif;
+  background: #919191;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #be5b70;
+}
+
+p {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #111;
+}
+
+.changeColor {
+  color: #111;
+}
+
+/***********************
+Headings
+************************/
+
+h1 {
+  font-size: 60px;
+  font-family: 'Joti One', cursive;
+  color: #111;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  text-decoration: outline;
+   -webkit-text-stroke: 1px #111;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  opacity: 1;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+/***********************
+General Navigation
+************************/
+
+nav {
+  background: transparent;
+  padding: 10px 0;
+  margin: 20px 0 25px;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding-bottom: 1%;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-weight: 800;
+}
+
+.hangingindent {
+  padding-left: 0;
+  text-indent: -22px;
+}
+
+/* General Nav Link */
+
+nav a,
+nav a:visited,
+nav a:hover {
+  text-decoration: none;
+}
+
+/***********************
+DropDown Menu Styling
+************************/
+
+/* The clearfix will make sure
+that if a parent element has a floated
+child element, it will disappear. */
+
+.clear-fix:after {
+  display: block;
+  clear: both;
+}
+
+/***********************
+Styling for Responsive
+DropDown Menu
+************************/
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+#menu .main-menu {
+  display: none;
+}
+
+#tm:checked + .main-menu {
+  display: block;
+}
+
+#menu input[type="checkbox"],
+#menu ul span.drop-icon {
+  display: none;
+}
+
+#menu li,
+#toggle-menu,
+#menu .sub-menu {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, .05);
+}
+
+#menu li,
+#toggle-menu {
+  border-width: 0 0 1px;
+}
+
+#menu .sub-menu {
+  background: #444;
+  border-width: 1px 1px 0;
+  margin: 0 1em;
+}
+
+#menu .sub-menu li:last-child {
+  border-width: 0;
+}
+
+#menu li,
+#toggle-menu,
+#menu a {
+  position: relative;
+  display: block;
+  color: #919191;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .125);
+}
+
+#menu,
+#toggle-menu {
+  background: #3e3436;
+}
+
+#toggle-menu,
+#menu a {
+  padding: 1em 1.5em;
+}
+
+#menu a {
+  transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+}
+
+#menu a:hover {
+  background: #2e2728;
+  color: #be5b70;
+}
+
+#menu .sub-menu {
+  display: none;
+}
+
+#menu input[type="checkbox"]:checked + .sub-menu {
+  display: block;
+}
+
+#menu .sub-menu a:hover {
+  color: #be5b70;
+}
+
+#toggle-menu .drop-icon,
+#menu li label.drop-icon {
+  position: absolute;
+  right: 1.5em;
+  top: 1.25em;
+}
+
+#menu label.drop-icon, #toggle-menu span.drop-icon {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .125);
+  text-shadow: 0 0 0 transparent;
+  color: rgba(255, 255, 255, .75);
+}
+
+#menu .drop-icon {
+  line-height: 1;
+}
+
+/* Mobile Nav */
+
+.mobile-nav {
+  background: #3e3436;
+  padding: 20px 0 52px;
+}
+
+/************************
+Hamburger Mobile Menu:
+jQuery code can be found
+in hamburger.js
+************************/
+
+.menu-btn,
+.menu-btn div,
+.menu-btn span {
+  cursor: pointer;
+}
+
+.menu-btn div {
+  position: absolute;
+  left: 100%;
+  top: 64%;
+  line-height: 1.3;
+  font-size: 18px;
+  font-weight: 200;
+  vertical-align: middle;
+  z-index: 99;
+}
+
+.menu-btn span {
+  display: block;
+  width: 36px;
+  height: 5px;
+  margin: 6px 10px 6px 20px;
+  background: rgb(255,255,255);
+  z-index: 99;
+}
+
+.menu-btn span:last-child {
+  margin-bottom: 5px;
+}
+
+.responsive-menu {
+  display: none;
+}
+
+/* Expand and Close Menu Class Selectors */
+
+.expand {
+  display: block !important; 
+}
+
+.close-btn {
+  display: none;
+}
+/***********************
+Auto/Next/Prev Slider CSS
+jQuery and Javascript
+code can be found in
+slider.js
+************************/
+
+#slide-wrapper {
+  max-height: 600px;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  border-top: 5px solid #111;
+  border-bottom: 5px solid #111;
+  background: #3e3436;
+}
+
+.container {
+  box-shadow: 0 0 15px 0 #be5b70;
+  max-width: 600px;
+  width: 100%;
+  max-height: 400px;
+  height: 100%;
+  background: transparent;
+  margin: 5% auto;
+  text-align: center;
+  position: relative;
+}
+.container div {
+  background: transparent;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  height: 100%;
+  display: inline-block;
+  display: none;
+}
+.container img {
+  max-width: 600px;
+  width: 100%;
+  max-height: 400px;
+  height: 100%;
+}
+
+/* Auto Slider Button Styling */
+
+button {
+  position: absolute;
+  margin-top: 4px;
+  border: inset 1px solid #aaa;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.next {
+  right: 10px;
+  background: #be5b70;
+  color: #aaa;
+}
+
+.prev {
+  left: 10px;
+  background: #be5b70;
+  color: #aaa;
+}
+
+.prev a,
+.next a {
+  color: #111;
+}
+
+/* Next and Prev Trivia Navigation 
+and some leftover 
+from auto slider buttons too */
+
+#prev {
+  float: left;
+}
+
+#prev,
+#next,
+#imageDescriptionNext,
+#imageDescriptionPrev,
+button.prev:hover,
+button.next:hover,
+button.prev:focus,
+button.next:focus,
+button:hover,
+button:focus {
+  outline: none;
+}
+
+/**************************
+Image Container, Img ID,
+Prev/Next Arrows Slider CSS
+jQuery and Javascript
+code can be found in
+still.js
+
+Desc Container, Desc ID,
+Prev/Next Arrows Slider CSS
+jQuery and Javascript
+code can be found in
+still.js
+***************************/
+
+.intro {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.siteNav {
+  max-width: 800px;
+  width: 100%;
+}
+
+#container {
+  box-shadow: 0 0 10px 0 #be5b70;
+  max-width: 600px;
+  max-height: 430px;
+  margin: 1.5% auto;
+  text-align: center;
+}
+
+#container img {
+  max-width: 100%;
+  height: auto;
+  height: 363.75px;
+  /*height: 100%;*/
+}
+
+#slideshowImage {
+  height: auto;
+  height: 363.75px;
+  margin: 2.5% auto;
+}
+
+#imageDescription {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  color: #111;
+  text-align: center;
+}
+
+/* More prev Trivia Navigation 
+and next and prev input button styling
+for still slider */
+
+#imageDescriptionPrev {
+  margin-left: 45%;
+  padding: 0;
+}
+
+#imageDescriptionNext {
+  padding: 0;
+}
+
+#prev,
+#next,
+#imageDescriptionNext,
+#imageDescriptionPrev {
+  border-radius: 5px;
+  background: #be5b70;
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#prev,
+#next {
+  color: #aaa;
+}
+
+#prev {
+  border: 1px outset solid #be5b70;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0;
+}
+
+#next {
+  border: 1px inset solid #be5b70;
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 0;
+}
+
+#imageDescriptionNext,
+#imageDescriptionPrev {
+  color: #aaa;
+  border: 1px inset solid #be5b70;
+}
+
+/* Quiz Styling */
+
+input#answer[type="submit"] {
+  margin: 10% 2.5% 2.5%;
+  display: block;
+  background-color: #fff;
+  border-radius: 3px;
+  outline: none;
+}
+
+.explanation {
+  margin: 2.5%;
+}
+
+/* Javascript Quiz Styling */
+div#quiz {
+  background: #be5b70;
+  color: #3e3436;
+  border-top: 5px solid #111;
+  border-bottom: 5px solid #111;
+  padding: 10px 40px 40px 40px;
+}
+
+/* JavaScript Quiz Radio Button Styling */
+
+input[type=radio] {
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+input[type=radio] + label {
+  margin-left: 10px;
+  padding-top: 2px;
+  line-height: 1.5em;
+  vertical-align: middle;
+
+}
+
+/* Quiz Footer Styling */
+
+footer {
+  width: 100%;
+  clear: both;
+  margin-top: 10%;
+  padding: 0 5%;
+}
+
+footer li {
+  float: right;
+  margin: 0 auto 2.5%;
+  padding-right: 5%;
+  text-decoration: none;
+}
+
+footer p {
+  text-align: center;
+  margin: 2.5% auto;
+}
+
+/***********************
+  Scroll To Top Button
+  jQuery code can be
+  found in hamburger.js
+************************/
+
+.scrollToTop {
+  width: 50px;
+  height: 25px;
+  padding: 10px;
+  background: transparent;
+  padding: 0;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
+  position: fixed;
+  top: 360px;
+  right: 40px; 
+  display: none;
+  }
+
+.scrollToTop:after {
+  content: '\f077';
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: normal 40px/1 'FontAwesome';
+  vertical-align: middle;
+  padding: 0 5px 10px;
+  color: #3e3436;
+  background: #be5b70;
+  border-radius: 100%;
+  border: 6px solid #3e3436;
+  outline-style: none;
+}
+
+.scrollToTop:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 479px) {
+
+  /***********************
+  Dropdown Menu
+  ************************/
+
+  #menu ul {
+    margin: 2em 0;
+  }
+
+  .mobile-nav {
+    background: #3e3436;
+    padding: 25px 0 0;
+  }
+
+  .menu-btn {
+    padding-bottom: 25px;
+  }
+
+  /***********************
+  Auto Slider Styling
+  ************************/
+
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: 1.5% auto;
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container div {
+    width: 100%;
+  }
+
+  /***********************
+  Still Slider Styling
+  ************************/
+  .siteNav,
+  .intro {
+    margin: 0 auto;
+  }
+
+  #container {
+    width: 100%;
+    height: 310px;
+    margin: 1.5% auto;
+  }
+
+  #container img {
+    width: 100%;
+    height: 310px;
+  }
+
+  #imageDescriptionPrev,
+  #imageDescriptionNext {
+    color: #fff;
+  }
+
+  #imageDescriptionPrev {
+    margin-left: 37.5%;
+  }
+
+  .intro {
+    margin: 2.5% auto 5%;
+    width: 97.5%;
+  }
+  .siteNav {
+    margin: 0 auto 20%;
+  }
+
+  #prev {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #next {
+    float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  #imageDescription {
+    padding: 5px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+
+  .mobile-nav {
+    padding: 25px 0 0;
+  }
+
+  .menu-btn {
+    padding-bottom: 25px;
+  }
+
+  .intro {
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  .siteNav {
+    margin: 2.5% auto 10%;
+  }
+
+  #imageDescription {
+    padding: 5px;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+
+  #prev {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+  #next {
+    float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .siteNav {
+    margin: 2.5% auto;
+  }
+}
+
+@media only screen and (min-width: 832px) {
+
+  .mobile-nav {
+    padding: 20px 0 52px;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  #menu ul {
+    margin: -6em 2em 6em 12em;
+    padding: 0;
+    background: #3e3436; 
+  }
+
+  #menu .main-menu {
+    display: block;
+  }
+
+  #toggle-menu,
+  #menu label.drop-icon {
+    display: none;
+  }
+
+  #menu ul span.drop-icon {
+    display: inline-block;
+  }
+
+  #menu li {
+    float: left;
+    border-width: 0 1px 0 0;
+  }
+
+  #menu .sub-menu li {
+    float: none;
+  }
+
+  #menu .sub-menu {
+    border-width: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 12em;
+    z-index: 3000;
+  }
+
+  #menu, .sub-menu,
+  #menu input[type="checkbox"]:checked + .sub-menu {
+    display: block;
+  }
+
+  #menu .sub-menu li {
+    border-width: 0 0 1px;
+  }
+
+  #menu .sub-menu {
+    top: 100%;
+    left: 0;
+  }
+
+  #menu li:hover > input[type="checkbox"] + .sub-menu {
+    display: block;
+  }
+}

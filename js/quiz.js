@@ -55,9 +55,9 @@ function renderQuestion() {
     quiz.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct and your score is " + percentCorrect + "%.</h2>";
     _("quiz_status").innerHTML = "Quiz Completed.";
     // delay replacement of current page with new one so that player has enough time to read his/her score.
-    setTimeout(function() {
+    /*setTimeout(function() {
       document.location.replace("slider-2.html");
-    }, 1500);
+    }, 1500);*/
     
     position = 0;
     correct = 0;

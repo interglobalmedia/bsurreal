@@ -46,7 +46,7 @@ var images =  [
               {src:"<div id='slideshowImage'><img src='img/sleepyhollow4.jpg' width='600' height='400' /></div>",
                desc:"<div id='imageDescription'>Did you know that Johnny Depp initially found the idea of having Christina Ricci as a love interest in the movie somewhat odd, because he knew hersince she was nine years old?</div>"},
               {src:"<div id='slideshowImage'><img src='img/sleepy_hollow6.jpg' width='600' height='400' /></div>",
-               desc:"<div id='imageDescription'></div>"},
+               desc:"<div id='imageDescription'>Johnny Depp did all of his own stunts for the final scene where he is dragged by the horse - he had bullet-proof clothing underneath his wardrobe.</div>"},
               {src:"<div id='slideshowImage'><img src='img/sleepyhollow-1.png' width='600' height='400' /></div>",
                desc:"<div id='imageDescription'>Did you know that Johnny Depp adopted Golden Eye, the horse that played Gunpowder, Ichabod Crane's horse in the film Sleepy Hollow, when he heard it was going to be put down?</div>"},
               {src:"<div id='slideshowImage'><img src='img/psycho-822410.png' width='600' height='400' /></div>",

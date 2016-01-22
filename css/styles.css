@@ -387,25 +387,15 @@ fieldset {
     font-size: 72px;
   }
 
-  .main-body {
-    background: no-repeat;
-    background: none;
+  #cross-fade {
     /* Set rules to fill background */
-    min-height: 1080px;
-    min-width: 73%;
-    /* Set up proportionate scaling */
-    width: auto;
-    height: 100%;
-    /* Set up positioning */
-    position: fixed;
-    top: 0;
-    left: 0; 
+    min-height: 100%;
+    max-width: 73%;
   }
-  .main-body,
-  #cross-fade,
-  #cross-fade img{
-    padding: 0;
-    background: none;
+  #cross-fade img {
+    /* Set rules to fill background */
+    min-height: 100%;
+    max-width: 100%;
   }
 
   #intro p {

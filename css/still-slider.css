@@ -275,8 +275,8 @@ in hamburger.js
   display: block !important; 
 }
 
-.close-btn {
-  display: none;
+.close {
+  visibility: hidden;
 }
 /***********************
 Auto/Next/Prev Slider CSS
@@ -286,7 +286,7 @@ slider.js
 ************************/
 
 #slide-wrapper {
-  max-height: 600px;
+  max-height: 800px;
   padding-top: 1.5%;
   padding-bottom: 1.5%;
   border-top: 5px solid #111;
@@ -406,7 +406,7 @@ still.js
   max-width: 100%;
   height: auto;
   height: 363.75px;
-  /*height: 100%;*/
+  height: 100%;
 }
 
 #slideshowImage {
@@ -415,11 +415,17 @@ still.js
   margin: 2.5% auto;
 }
 
-#imageDescription {
+#quiz_description {
   margin: 0 auto;
   max-width: 600px;
   width: 100%;
   color: #111;
+  text-align: center;
+}
+
+#hint #toggle-menu {
+  margin: 0 auto;
+  color: #aaa;
   text-align: center;
 }
 
@@ -685,7 +691,7 @@ div#faqs a {
     margin-left: 10px;
   }
 
-  #imageDescription {
+  #quiz_description {
     padding: 5px;
   }
 }
@@ -709,7 +715,7 @@ div#faqs a {
     margin: 2.5% auto 10%;
   }
 
-  #imageDescription {
+  #quiz_description {
     padding: 5px;
   }
 }
@@ -796,6 +802,15 @@ div#faqs a {
   }
 
   #menu li:hover > input[type="checkbox"] + .sub-menu {
+    display: block;
+  }
+  #hint #toggle-menu {
+    color: #aaa;
+    display: block;
+}
+@media screen and (min-width: 1025px) {
+  #hint #toggle-menu {
+    color: #aaa;
     display: block;
   }
 }

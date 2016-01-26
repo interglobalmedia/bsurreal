@@ -11,6 +11,7 @@ $("#imageDescriptionNext").click(function() {
  // to the description values in the images array of objects.
 var image = document.getElementById("slideshowImage");
 var imgDesc = document.getElementById("imageDescription");
+imgDesc = imgDesc.style.visibility = "hidden";
 // Image/Description array of objects stored in a variable
 var images =  [
               {src:"<div id='slideshowImage'><img src='img/0Red-Shoes-1198.jpg' width='600' height='400' /></div>",

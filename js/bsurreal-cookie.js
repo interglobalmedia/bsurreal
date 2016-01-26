@@ -78,15 +78,3 @@ $(document).ready(function() {
     $('h3').text('Welcome Back ' + user + '.' + ' Enjoy the game!');
   }
 });
-
-/*$('#submit-name').on('click', function() {
-    // get value from input.
-    var user=getCookie("username");
-    var cookieVal=getCookie(user);
-    user = $('#name-field').val();
-    // Update heading
-    if (user != "" && user != null) {
-    $('h3').text('Hi ' + user + '!');
-    // Set cookie to save name
-    setCookie('username', user, 30);
-});*/

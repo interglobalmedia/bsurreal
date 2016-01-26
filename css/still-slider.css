@@ -59,6 +59,11 @@ h3 {
   text-align: center;
 }
 
+h4 {
+  font-size: 16px;
+  text-align: center;
+}
+
 /***********************
 General Navigation
 ************************/
@@ -443,6 +448,11 @@ for still slider */
   cursor: pointer;
 }
 
+#imageDescriptionNext,
+#imageDescriptionPrev {
+  visibility: hidden;
+}
+
 #prev,
 #next {
   color: #aaa;
@@ -493,6 +503,8 @@ div#quiz {
   padding: 10px 40px 40px 40px;
 }
 
+/* Javascript Quiz Description Styling */
+
 /* JavaScript Quiz Radio Button Styling */
 
 input[type=radio] {
@@ -527,6 +539,25 @@ footer li {
 footer p {
   text-align: center;
   margin: 2.5% auto;
+}
+
+/* Javascript FAQs Styling */
+div#faqs {
+  background: #be5b70;
+  color: #3e3436;
+  border-top: 5px solid #111;
+  border-bottom: 5px solid #111;
+  padding: 10px 40px 40px 40px;
+}
+
+div#faqs a {
+  color: #aaa;
+}
+
+/* Quiz Trivia Below Images Styling */
+
+#quiz_category h4 {
+  margin: 0 auto;
 }
 
 /***********************

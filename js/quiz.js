@@ -1,3 +1,15 @@
+$(document).ready(function() {
+  // hide the #quiz_description that appears below the image
+  $("#quiz_description").hide();
+  // toggle the component with id of #quiz_description by clicking on element with id of #hint
+  $("#hint").on("mouseenter", function() {
+    $(this).next("#quiz_description").slideDown(600);
+  });
+  $("#hint").on("mouseleave", function() {
+    $(this).next("#quiz_description").slideUp(600);
+  });
+});
+
 // Create a quiz in which player chooses a radio button and then hits submit to get back a correct or wrong response
 // player's right and wrong answers are recorded an then given a totalCorrect at the end of each game
 // perhaps even add points for correct answers?
@@ -5,11 +17,11 @@
 // quiz_status: tells the player which question he/she is on out of how many totoal questions there are
 // quiz: where the test questions will actually be rendered
 
-var position = 0, quiz, quiz_status, question, choice, choices, chA, chB, chC, chD, correct = 0, percentCorrect, category, categories, allTrivia, trivia; //keeps track of where the player is in the game. Which question is he/she on.
+var position = 0, quiz, quiz_status, question, choice, choices, chA, chB, chC, chD, correct = 0, percentCorrect, category, categories, trivia; //keeps track of where the player is in the game. Which question is he/she on.
 var questions = [
   ["Name of this movie?", "Jewel of The Nile", "The Pink Panther", "The Red Shoes", "Fantasia", "C", "Fantasy", "Did you know that the movie is responsible for this actress meeting and marrying her husband Ludovic Kennedy? He said that when he saw her in the movie, he immediately knew that she was going to be the girl he was going to marry. He actively pursued her, and married her two years later, in February 1950, at the Chapel Royal in London's Hampton Court Palace!"],
   ["Name of the actress?", "Moira Shearer", "Maureen O'Hara", "Rosalind Russell", "Katherine Hepburn", "A", "Fantasy", "This is Moira Shearer and Robert Helpmann in The Red Shoes! Did you know that Moira Shearer got badly sunburned and developed blisters on her back on her first day of shooting this movie? Later on she also wrenched her neck when told to leap from a window, and received a scratch that turned into an abscess. Shearer often found herself being suspended in a harness for up to eight hours while being buffetted by wind machines. What rough going!"],
-  ["The director?", "Elia Kazan,", "Ernst Lubitsch", "Preston Sturges", "Michael Powell and Emeric Pressburger", "D", "Fantasy", "This is from the title ballet sequence of The Red Shoes! Did you know that this sequence took 6 weeks to shoot and used over 120 paintings from famous German set designer Hein Heckroth?"],
+  ["The director?", "Elia Kazan", "Ernst Lubitsch", "Preston Sturges", "Michael Powell and Emeric Pressburger", "D", "Fantasy", "This is from the title ballet sequence of The Red Shoes! Did you know that this sequence took 6 weeks to shoot and used over 120 paintings from famous German set designer Hein Heckroth?"],
   ["Year it was made?", "1940", "1948", "1952", "1939", "B", "Fantasy", "This is a famous ballet scene from The Red Shoes with Moira Shearer and Robert Helpmann! Did you know that in Hans Christian Anderson's original fairy tale, the ballerina had her feet hacked off by a woodsman to stop her from dancing?"],
   ["What is the name of this movie?", "Raiders of The Lost Ark", "101 Dalmatians", "Persona", "Blade Runner", "D", "Future Noir", "This is a famous scene from Blade Runner when Deckard (Harrison Ford) found Zhora, one of the replicants, at her place of work and is about to kill her. She knows that she is doomed and wouldn't have much time to live anyway, but she runs for her life nonetheless!"],
   ["What is the name of the actress?", "Jennifer Aniston", "Marilyn Monroe", "Daryl Hannah", "Margot Robbie", "C", "Future Noir", "This is from Blade Runner with Daryl Hannah! Did you know that she wasn't the first choice for the role of Pris? Debbie Harrie of Blondie fame was the first choice. Supposedly Daryl Hannah still has the blond wig she wore for the role."],
@@ -42,6 +54,7 @@ var questions = [
   ["Which actor and actress were initially considered for the two adult leads?", "Cary Grant and Audrey Hepburn", "James Stewart and Grace Kelly", "Gary Cooper and Betty Grable", "Paul Newman and Joanne Woodward", "C", "Mystery", "Did you know that when Robert Mitchum first heard that Shelley Winters had been cast in the role of Willa, he said 'She looks and sounds as much like a wasted West Virginia girl as I do. The only bit she'll do convincingly is to float in the water with her throat cut.'"],
   ["What was the name of the male 'antagonist' in the movie?", "Harry Powell", "Mark Lewis", "Charlie Oakley", "Jack Wilson", "A", "Mystery", "Did you know that Dutch-born American serial killer Harry Powers (born Herman Drenth) was the inspiration for the role of the Preacher?"]
 ];
+
 // returns the document.getElementById() reference to scripts whenever needed. Returns the object reference for the id string.
 function _(x) {
   return document.getElementById(x);
@@ -53,10 +66,6 @@ function renderQuestion() {
     percentCorrect = Math.round((correct / questions.length) * 100);
     quiz.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct and your score is " + percentCorrect + "%.</h2>";
     _("quiz_status").innerHTML = "Quiz Completed.";
-    // delay replacement of current page with new one so that player has enough time to read his/her score.
-    /*setTimeout(function() {
-      document.location.replace("slider-2.html");
-    }, 1500);*/
     
     position = 0;
     correct = 0;
@@ -69,6 +78,8 @@ function renderQuestion() {
   // the players' totals in toto as opposed to simply by page. position+1 refers to question 0 + 1 which 
   // means the first question. So when the page first loads, question 1 of 4 will appear. 
   // So this lets the player know which question they are on and what the total number of questions is.
+ trivia = questions[position][7];
+ _("quiz_description").innerHTML = "<div>"+trivia+"</div>";
   category = questions[position][6];
   _("quiz_status").innerHTML = "<h4>Category: " + category + "</h4>" + "Question " + (position + 1) + " of " + questions.length;
   question = questions[position][0];
@@ -76,6 +87,7 @@ function renderQuestion() {
   chB = questions[position][2];
   chC = questions[position][3];
   chD = questions[position][4];
+  /*quiz.innerHTML = "<div id='quiz_description'>"+trivia+"</div>";*/
   quiz.innerHTML = "<h4 id='quiz_status'>"+category+"</h4>";
   quiz.innerHTML = '<form>';
   quiz.innerHTML += '<fieldset>';
@@ -92,33 +104,38 @@ function renderQuestion() {
   quiz.innerHTML += '</fieldset';
   quiz.innerHTML += '</form>';
   }
+
   // Need code that will look through name group of choices variablethat was initialized earlier to see which one the player selected.
   // document.getElementsByName() results in an array.
   // 
+function checkDescription() {
+  allTrivia = document.getElementById("quiz_description");
+    if(question === questions[position][0] && trivia === questions[position][7]) {
+      allTrivia = trivia.toString();
+    }
+  }
 function checkAnswer() {
   choices = document.getElementsByName("choices");
   for (var i = 0; i < choices.length; i++) {
-      if(choices[i].checked) {// for loop runs over the choices array, and this way one can see what the player's choice is.
-        choice = choices[i].value; // The choice will be put into this choice variable here. That way it can be evaluated outside of the for loop.
-      }                            
+    if(choices[i].checked) {// for loop runs over the choices array, and this way one can see what the player's cfile:///Users/mariacam/Development/bsurreal-angular/img/0Red-Shoes-1198.jpghoice is.
+      choice = choices[i].value; // The choice will be put into this choice variable here. That way it can be evaluated outside of the for loop.
+    }                            
   }
   function checkCategory() {
     categories = document.getElementById("quiz_category");
     if(question === questions[position][0] && category === questions[position][6]) {
       categories = category.toString();
   }
-  function checkDescription() {
-    allTrivia = document.getElementById("imageDescription");
-  }
   // Evaluate whether the choice the player selected is the correct one or not.
   if(choice === questions[position][5]) {
       correct++;
   }
 }
+    checkDescription();
     checkCategory();
     position++;// this changes the position of the question the player is on.
     renderQuestion();
     next();
 }
-
 window.addEventListener("load", renderQuestion, false);
+

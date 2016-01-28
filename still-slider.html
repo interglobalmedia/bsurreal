@@ -9,8 +9,9 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/still-slider.css">
     <link rel="stylesheet" type="text/css" href="css/dark-bottom.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
   </head>
-  <body onload="checkCookie()">
+  <body onload="checkCookie()" onunload="saveSelections(document.forms[0])">
     <h1>bsurreal</h1>
     <h2>an interactive movie trivia game</h2>
     <nav>
@@ -26,13 +27,13 @@
           <input type="checkbox" id="tm">
           <ul class="main-menu clearfix">
             <li>
-              <a href="still-slider.html">Mystery</a>
+              <a class="mystery" href="still-slider.html">Mystery</a>
             </li>
             <li>
-              <a href="still-slider.html">Fantasy</a>
+              <a class="fantasy" href="still-slider.html">Fantasy</a>
             </li>
             <li>
-              <a href="still-slider.html">Future Noir</a>
+              <a class="future-noir" href="still-slider.html">Future Noir</a>
             </li>
             <li><a href="faqs.html">FAQs</a></li>
             <li><a href="index.html">Exit</a></li>
@@ -40,6 +41,27 @@
         </div>
       </div>
     </nav>
+    <div id="currentDate">
+    <script type="text/javascript">
+      tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+      tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+      function GetClock() {
+      var d=new Date();
+      var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+      if(nyear<1000) nyear+=1900;
+      var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+      if(nmin<=9) nmin="0"+nmin
+      if(nsec<=9) nsec="0"+nsec;
+
+      document.getElementById('currentDate').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+      }
+
+      window.onload=function() {
+      GetClock();
+      setInterval(GetClock,1000);
+      }
+    </script>
+    </div>
     <div id="slide-wrapper">
       <input type="button" id="imageDescriptionPrev" value="<">
       <input type="button" id="imageDescriptionNext" value=">">
@@ -75,5 +97,6 @@
     <script type="text/javascript" src="js/hamburger.js"></script>
     <script type="text/javascript" src="js/still-slider.js"></script>
     <script type="text/javascript" src="js/quiz.js"></script>
+    <script type="text/javascript" src="saveRestoreForm.js"></script>
   </body>
 </html>

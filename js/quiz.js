@@ -1,22 +1,23 @@
+// Showing and hiding #quiz_description which appears below image
 $(document).ready(function() {
+  var $quiz_description = $("#quiz_description");
+  var $hint = $("#hint");
   // hide the #quiz_description that appears below the image
-  $("#quiz_description").hide();
+  $($quiz_description).hide();
   // toggle the component with id of #quiz_description by clicking on element with id of #hint
-  $("#hint").on("mouseenter", function() {
-    $(this).next("#quiz_description").slideDown(600);
+  $($hint).on("mouseenter", function() {
+    $(this).next($quiz_description).slideDown(600);
   });
-  $("#hint").on("mouseleave", function() {
-    $(this).next("#quiz_description").slideUp(600);
+  $($hint).on("mouseleave", function() {
+    $(this).next($quiz_description).slideUp(600);
   });
 });
-
 // Create a quiz in which player chooses a radio button and then hits submit to get back a correct or wrong response
 // player's right and wrong answers are recorded an then given a totalCorrect at the end of each game
 // perhaps even add points for correct answers?
 
 // quiz_status: tells the player which question he/she is on out of how many totoal questions there are
 // quiz: where the test questions will actually be rendered
-
 var position = 0, quiz, quiz_status, question, choice, choices, chA, chB, chC, chD, correct = 0, percentCorrect, category, categories, trivia; //keeps track of where the player is in the game. Which question is he/she on.
 var questions = [
   ["Name of this movie?", "Jewel of The Nile", "The Pink Panther", "The Red Shoes", "Fantasia", "C", "Fantasy", "Did you know that the movie is responsible for this actress meeting and marrying her husband Ludovic Kennedy? He said that when he saw her in the movie, he immediately knew that she was going to be the girl he was going to marry. He actively pursued her, and married her two years later, in February 1950, at the Chapel Royal in London's Hampton Court Palace!"],
@@ -96,13 +97,13 @@ function renderQuestion() {
   // rendering the radio button answer choices. That way don't have to actually have this on the html page. 
   // Using += after the first .innerHTML because appending to it. If I didn't use +=, then  only the last line would append.
   // .innerHTML property returns the HTML content (innerHTML) of an element. It is used with teh document.getElementById(), TagName(), etc.
-  quiz.innerHTML += "<input type='radio' name='choices' value='A'><label for='choices'>"+chA+"</label><br>";
-  quiz.innerHTML += "<input type='radio' name='choices' value='B'><label for='choices'>"+chB+"</label><br>";
-  quiz.innerHTML += "<input type='radio' name='choices' value='C'><label for='choices'>"+chC+"</label><br>";
-  quiz.innerHTML += "<input type='radio' name='choices' value='D'><label for='choices'>"+chD+"</label><br><br>";
+  quiz.innerHTML += "<input type='radio' id='choices' name='choices' value='A'><label for='choices'>"+chA+"</label><br>";
+  quiz.innerHTML += "<input type='radio' id='choices' name='choices' value='B'><label for='choices'>"+chB+"</label><br>";
+  quiz.innerHTML += "<input type='radio' id='choices' name='choices' value='C'><label for='choices'>"+chC+"</label><br>";
+  quiz.innerHTML += "<input type='radio' id='choices' name='choices' value='D'><label for='choices'>"+chD+"</label><br><br>";
   quiz.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
   quiz.innerHTML += '</fieldset';
-  quiz.innerHTML += '</form>';
+  quiz.innerHTML += '</form><script language=JavaScript type="">loadSelections(document.forms[0]);</script>';
   }
 
   // Need code that will look through name group of choices variablethat was initialized earlier to see which one the player selected.

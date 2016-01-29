@@ -56,6 +56,35 @@ var questions = [
   ["What was the name of the male 'antagonist' in the movie?", "Harry Powell", "Mark Lewis", "Charlie Oakley", "Jack Wilson", "A", "Mystery", "Did you know that Dutch-born American serial killer Harry Powers (born Herman Drenth) was the inspiration for the role of the Preacher?"]
 ];
 
+var questionsObjects = [];
+for(var i = 0; i < questions.length; i++)
+{
+  var currentQuestion = questions[i];
+  questionsObjects.push({
+    question: currentQuestion[0],
+    options: [
+      currentQuestion[1],
+      currentQuestion[2],
+      currentQuestion[3],
+      currentQuestion[4]
+    ],
+    correctAnswer: currentQuestion[5],
+    category: currentQuestion[6],
+    trivia: currentQuestion[7]
+  });
+}
+console.log(questionsObjects);
+
+
+// Return the subset of questionsObjects
+// with the given category
+function filterByCategory(category)
+{
+  return _.filter(questionsObjects, function(o) {
+    return o.category === category;
+  });
+}
+
 // returns the document.getElementById() reference to scripts whenever needed. Returns the object reference for the id string.
 function _(x) {
   return document.getElementById(x);
@@ -89,7 +118,7 @@ function renderQuestion() {
   chC = questions[position][3];
   chD = questions[position][4];
   /*quiz.innerHTML = "<div id='quiz_description'>"+trivia+"</div>";*/
-  quiz.innerHTML = "<h4 id='quiz_status'>"+category+"</h4>";
+  quiz.innerHTML = "<h4 id='quiz_category'>"+category+"</h4>";
   quiz.innerHTML = '<form>';
   quiz.innerHTML += '<fieldset>';
   quiz.innerHTML = '<legend>'+question+'</legend><br>';
@@ -103,8 +132,8 @@ function renderQuestion() {
   quiz.innerHTML += "<input type='radio' id='choices' name='choices' value='D'><label for='choices'>"+chD+"</label><br><br>";
   quiz.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
   quiz.innerHTML += '</fieldset';
-  quiz.innerHTML += '</form><script language=JavaScript type="">loadSelections(document.forms[0]);</script>';
-  }
+  quiz.innerHTML += '</form>';
+}
 
   // Need code that will look through name group of choices variablethat was initialized earlier to see which one the player selected.
   // document.getElementsByName() results in an array.

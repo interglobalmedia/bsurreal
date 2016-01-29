@@ -59,6 +59,48 @@ $(document).ready(function() {
     $('h3').text('Welcome Back ' + user + '.' + ' Enjoy the game!');
   }
 });
+// When user clicks on the image container, the <h3></h3> header disappears. Some people might find it annoying! Category remains
+// because it is h4 and not h3.
+$(document).ready(function() {
+  var $cookieGreeting = $("#cookieGreeting");
+  var $headingGreeting = $("h3");
+    $("#slide-wrapper").on("click", function() {
+      $(this).next($cookieGreeting).toggle();
+  });
+});
+
+
+// Function to check if a cookie has been set
+//Last, we create the function that checks if a cookie is set.
+
+//If the cookie is set it will display a greeting.
+
+//If the cookie is not set, it will display a prompt box, 
+//asking for the name of the user, and stores the username cookie 
+// for 365 days, by calling the setCookie function:
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome back " + user);
+    } else {
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+// Updating the h3 on the game page if the player is a returning user
+$(document).ready(function() {
+  // read the cookie
+  var user=getCookie("username");
+  var cookieVal=getCookie(user);
+  // if the cookie exists, update the heading
+  if (user != "" && user != null) {
+    $('h3').text('Welcome Back ' + user + '.' + ' Enjoy the game!');
+  }
+});
 
 // Cookie Pop Up only takes place once. The next time they come back, the script will read the cookie, 
 // identify them as a repeat visitor, and NOT open the window again.
@@ -137,3 +179,35 @@ SetCookie('count', count, exp);
    }
 }
 //  End -->*/
+function show_count() {
+var expdate = new Date();
+var num;
+expdate.setTime(expdate.getTime() +  (24 * 60 * 60 * 1000 * 31));
+if(!(num = GetCookie("jtotwcount")))
+num = 0;
+num++;
+SetCookie ("jtotwcount", num, expdate);
+if (num == 1) document.write("Since this is the first time you have been here, please take a moment to look around.");
+else document.write("You have been here " + num + " times.");
+}
+function auto_show_name() {
+if(GetCookie("jtotwname") != null)
+document.write("Welcome back to this week\'s tip " + GetCookie('jtotwname') + ". ");
+else {
+document.write("<FORM>Please enter your name: <INPUT TYPE = \"text\" NAME = \"nameinput\">" + "<BR><BR><INPUT TYPE = \"button\" VALUE = \"Save to Cookie\" onClick = \"set_name(this.form)\"></FORM>");
+document.write("Please enter your first name in the input" + " box and press the \"Save to Cookie\" button, then the page will automatically reload. ");
+   }
+}
+function set_name(form) {
+var expdate = new Date ();
+expdate.setTime (expdate.getTime() + (24 * 60 * 60 * 1000 * 31));
+var username = form.nameinput.value
+if (username != "") {
+if (confirm("Are you sure you want this saved as your name?")) {
+SetCookie ("jtotwname", username, expdate);
+window.history.go(0);
+   }
+}
+else alert("Geez, at least enter something, entering nothing will cause an error.");
+}
+// End -->

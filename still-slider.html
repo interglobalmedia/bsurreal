@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/dark-bottom.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
   </head>
-  <body onload="checkCookie()" onunload="saveSelections(document.forms[0])">
+  <body onload="checkCookie()">
     <h1>bsurreal</h1>
     <h2>an interactive movie trivia game</h2>
     <nav>
@@ -74,19 +74,27 @@
         </div>
       </div>
     </div>
-    <h3>
+    <div id="cookieGreeting">
+    <h3 id="headingGreeting">
       Hi! Try to answer the questions below to find out how strong your movie knowledge base is!
     </h3>
+    </div>
     <div>
       <h2 id="quiz_status"></h2>
       <h4 id="quiz_category"></h4>
       <div id="quiz"></div>
     </div>
+    <div id="lastModified">
+      <script>
+        if (Date.parse(document.lastModified) != 0)
+          document.write('This page was last modified: '
+                          + document.lastModified);
+      </script>
+    </div>
     <footer class="game-page">
-      <p>&copy; 2015 bsurreal All Rights Reserved.</p>
+      <p>&copy; 2015<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> &#8224; bsurreal &#8224; All Rights Reserved.</p>
       <li><a href="#" class="scrollToTop"></a></li>
-      <li><a href="faqs.html">Terms</a></li>
-      <li><a href="faqs.html">Privacy</a></li>
+      <li><a href="faqs.html"> Privacy &amp; Terms</a></li>
       <div class="cc_banner cc_container cc_container--open">
         <a class="cc_btn">Got it!</a>
         <p class="cc_message">This website uses cookies to ensure you get the best experience on our website. <a class="cc_more_info" href="faqs.html">Learn More</a></p>
@@ -97,6 +105,5 @@
     <script type="text/javascript" src="js/hamburger.js"></script>
     <script type="text/javascript" src="js/still-slider.js"></script>
     <script type="text/javascript" src="js/quiz.js"></script>
-    <script type="text/javascript" src="saveRestoreForm.js"></script>
   </body>
 </html>

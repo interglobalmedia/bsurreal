@@ -32,6 +32,13 @@ p {
 }
 
 /***********************
+<b> tag styling
+************************/
+
+b {
+  color: #111;
+}
+/***********************
 Headings
 ************************/
 
@@ -66,16 +73,13 @@ h4 {
 
 /* Styling For Date and Time Page Last Modified */
 
-#currentDate {
+#currentDate,
+#lastModified {
   border-top: #aaa;
   padding: 0;
   margin: 0 1.5%;
 }
 
-#greeting h4 {
-  background-color: #666;
-  z-index: 3000;
-}
 /***********************
 General Navigation
 ************************/
@@ -562,7 +566,7 @@ footer p {
 }
 
 /* Javascript FAQs Styling */
-div#faqs {
+#faqs {
   background: #be5b70;
   color: #3e3436;
   border-top: 5px solid #111;
@@ -570,7 +574,7 @@ div#faqs {
   padding: 10px 40px 40px 40px;
 }
 
-div#faqs a {
+#faqs a {
   color: #aaa;
 }
 
@@ -578,6 +582,20 @@ div#faqs a {
 
 #quiz_category h4 {
   margin: 0 auto;
+}
+
+/* saveToCookie Form Styling on FAQs Page */
+
+#saveToCookie {
+  margin: 0 20%;
+  border: 3px solid #3e3436;
+  background: #aaa;
+  padding: 3px;
+}
+
+input[type=text] {
+  max-width: 100%;
+  background: #aaa;
 }
 
 /***********************

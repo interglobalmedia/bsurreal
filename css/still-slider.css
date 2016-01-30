@@ -402,7 +402,9 @@ button.next:hover,
 button.prev:focus,
 button.next:focus,
 button:hover,
-button:focus {
+button:focus,
+input:focus,
+input:hover {
   outline: none;
 }
 
@@ -687,14 +689,24 @@ div#update {
 div#edit {
   border-bottom: 3px solid #3e3436;
   padding: 1% 5%;
+  cursor: pointer;
 }
 
 input#save {
   margin: 1.5% 0 0 1.5%;
   border: 3px solid #3e3436;
-  cursor: pointer;
   background: #fff;
+  cursor: pointer;
 }
+
+input[type='submit'] {
+  cursor: pointer;
+}
+
+#save {
+  outline: none;
+}
+
 @media screen and (max-width: 479px) {
 
   /***********************

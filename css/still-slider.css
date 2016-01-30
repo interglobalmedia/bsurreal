@@ -73,11 +73,32 @@ h4 {
 
 /* Styling For Date and Time Page Last Modified */
 
-#currentDate,
+#clockbox,
 #lastModified {
   border-top: #aaa;
   padding: 0;
   margin: 0 1.5%;
+}
+
+/* Styling For #greeting above #personalizedTimeGreeting that player clicks on to hide the #personalizedTimeGreeting */
+
+#greeting {
+  background: #be5b70;
+  height: 20px;
+  text-align: center;
+}
+
+/* Styling For #personalizedTimeGreeting */
+
+#personalizedTimeGreeting h2 {
+  margin: 1.5% auto;
+  text-align: center;
+}
+
+/* Styling For #timespent Stopwatch */
+
+#timespent {
+  padding-left: 1%;
 }
 
 /***********************
@@ -444,6 +465,13 @@ still.js
 #hint #toggle-menu {
   margin: 0 auto;
   color: #aaa;
+  text-align: center;
+}
+
+/* Styling for "Click Me" located above SlideShow Image */
+
+#clickImage {
+  color: #be5b70;
   text-align: center;
 }
 

@@ -34,28 +34,30 @@
         </div>
       </div>
     </nav>
-      <script type="text/javascript">
-        tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-        tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-        function GetClock() {
-        var d=new Date();
-        var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
-        if(nyear<1000) nyear+=1900;
-        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
-        if(nmin<=9) nmin="0"+nmin
-        if(nsec<=9) nsec="0"+nsec;
-
-        document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
-        }
-
-        window.onload=function() {
-        GetClock();
-        setInterval(GetClock,1000);
-        }
-      </script>
+    <script type="text/javascript">
+      tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+      tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+      function GetClock() {
+      var d=new Date();
+      var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+      if(nyear<1000) nyear+=1900;
+      var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+      if(nmin<=9) nmin="0"+nmin
+      if(nsec<=9) nsec="0"+nsec;
+      
+      document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+      }
+      
+      window.onload=function() {
+      GetClock();
+      setInterval(GetClock,1000);
+      }
+    </script>
     <div id="clockbox"></div>
     <div id="greeting">&rarr; Click Me &larr;</div>
-    <div id="personalizedTimeGreeting"><h2></h2></div>
+    <div id="personalizedTimeGreeting">
+      <h2></h2>
+    </div>
     <section>
       <div id="faqs">
         <h2>bsurreal FAQs and Cookies</h2>
@@ -88,17 +90,19 @@
     </section>
     <div id="lastModified">
       <script>
-      if (Date.parse(document.lastModified) != 0) {
-          document.write('Last modified: ' + document.lastModified);
-      }
+        if (Date.parse(document.lastModified) != 0) {
+            document.write('Last modified: ' + document.lastModified);
+        }
       </script> 
     </div>
     <footer class="game-page">
-      <p>&copy; 2015<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> &#8224; bsurreal &#8224; All Rights Reserved.</p>
+      <p>
+        &copy; 2015<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> &#8224; bsurreal &#8224; All Rights Reserved.
+      </p>
       <li><a href="#" class="scrollToTop"></a></li>
       <li><a href="faqs.html"> Privacy &amp; Terms</a></li>
       <div class="cc_banner-wrapper">
-        <div class="cc_banner cc_container cc_container--open">
+      <div class="cc_banner cc_container cc_container--open">
         <a class="cc_btn">Got it!</a>
         <p class="cc_message">This website uses cookies to ensure you get the best experience on our website. <a class="cc_more_info" href="faqs.html">Learn More</a></p>
       </div>

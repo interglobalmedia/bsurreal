@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/dark-bottom.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
   </head>
-  <body onload="checkCookie()">
+  <body onload="checkCookie();window.setTimeout('getSecs()',1)">
     <h1>bsurreal</h1>
     <h2>an interactive movie trivia game</h2>
     <nav>
@@ -27,13 +27,7 @@
           <input type="checkbox" id="tm">
           <ul class="main-menu clearfix">
             <li>
-              <a class="mystery" href="still-slider.html">Mystery</a>
-            </li>
-            <li>
-              <a class="fantasy" href="still-slider.html">Fantasy</a>
-            </li>
-            <li>
-              <a class="future-noir" href="still-slider.html">Future Noir</a>
+              <a class="fantasy" href="still-slider.html">Quiz</a>
             </li>
             <li><a href="faqs.html">FAQs</a></li>
             <li><a href="index.html">Exit</a></li>
@@ -41,33 +35,37 @@
         </div>
       </div>
     </nav>
-    <div id="currentDate">
-    <script type="text/javascript">
-      tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-      tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-      function GetClock() {
-      var d=new Date();
-      var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
-      if(nyear<1000) nyear+=1900;
-      var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
-      if(nmin<=9) nmin="0"+nmin
-      if(nsec<=9) nsec="0"+nsec;
-
-      document.getElementById('currentDate').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
-      }
-
-      window.onload=function() {
-      GetClock();
-      setInterval(GetClock,1000);
-      }
     </script>
     </div>
+      <script type="text/javascript">
+        tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+        tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+        function GetClock() {
+        var d=new Date();
+        var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+        if(nyear<1000) nyear+=1900;
+        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+        if(nmin<=9) nmin="0"+nmin
+        if(nsec<=9) nsec="0"+nsec;
+
+        document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+        }
+
+        window.onload=function() {
+        GetClock();
+        setInterval(GetClock,1000);
+        }
+      </script>
+    <div id="clockbox"></div>
+    <div id="greeting">&rarr; Click Me &larr;</div>
+    <div id="personalizedTimeGreeting"><h2></h2></div>
     <div id="slide-wrapper">
       <input type="button" id="imageDescriptionPrev" value="<">
       <input type="button" id="imageDescriptionNext" value=">">
+      <div id="clickImage">&darr; Click Me &darr;</div>
       <div id="container">
-          <div id="slideshowImage"><img src='img/0Red-Shoes-1198.jpg' width='600' height='400' /></div>
-        </div>
+        <div id="slideshowImage"><img src='img/0Red-Shoes-1198.jpg' width='600' height='400' /></div>
+      </div>
         <div id="descriptionContainer">
           <div id="hint"><label for="tm" id="toggle-menu">Need a hint? Mouse over this text to reveal spoiler!</label></div>
           <div id="quiz_description"></div>
@@ -82,16 +80,21 @@
     <div>
       <h2 id="quiz_status"></h2>
       <h4 id="quiz_category"></h4>
+        <center>
+          <form>
+            <input size=5 id="timespent" name="timespent">
+          </form>
+        </center>
       <div id="quiz"></div>
     </div>
     <div id="lastModified">
       <script>
-        if (Date.parse(document.lastModified) != 0)
-          document.write('This page was last modified: '
-                          + document.lastModified);
-      </script>
+      if (Date.parse(document.lastModified) != 0) {
+          document.write('Last modified: ' + document.lastModified);
+      }
+      </script> 
     </div>
-    <footer class="game-page">
+    <footer id="gamePage">
       <p>&copy; 2015<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> &#8224; bsurreal &#8224; All Rights Reserved.</p>
       <li><a href="#" class="scrollToTop"></a></li>
       <li><a href="faqs.html"> Privacy &amp; Terms</a></li>
@@ -105,5 +108,6 @@
     <script type="text/javascript" src="js/hamburger.js"></script>
     <script type="text/javascript" src="js/still-slider.js"></script>
     <script type="text/javascript" src="js/quiz.js"></script>
+    <script type="text/javascript" src="js/time.js"></script>
   </body>
 </html>

@@ -664,6 +664,33 @@ input[type=text] {
   text-decoration: none;
 }
 
+/* Styling for Editable Content Using Local Storage */
+
+#update,
+#edit {
+  text-align: left;
+  background: #fff;
+}
+
+#edit {
+  outline: none;
+}
+
+div#update {
+  border-top: 3px solid #3e3436;
+  margin-top: 1.5%;
+  padding: 1% 0 1% 5%;
+}
+
+div#edit {
+  border-bottom: 3px solid #3e3436;
+  padding: 1% 0 1% 5%;
+}
+
+input#edit {
+  margin: 1.5% 0 0 5%;
+  border: 3px solid #3e3436;
+}
 @media screen and (max-width: 479px) {
 
   /***********************

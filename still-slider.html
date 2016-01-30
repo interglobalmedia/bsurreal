@@ -37,28 +37,30 @@
     </nav>
     </script>
     </div>
-      <script type="text/javascript">
-        tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-        tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-        function GetClock() {
-        var d=new Date();
-        var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
-        if(nyear<1000) nyear+=1900;
-        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
-        if(nmin<=9) nmin="0"+nmin
-        if(nsec<=9) nsec="0"+nsec;
-
-        document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
-        }
-
-        window.onload=function() {
-        GetClock();
-        setInterval(GetClock,1000);
-        }
-      </script>
+    <script type="text/javascript">
+      tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+      tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+      function GetClock() {
+      var d=new Date();
+      var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+      if(nyear<1000) nyear+=1900;
+      var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+      if(nmin<=9) nmin="0"+nmin
+      if(nsec<=9) nsec="0"+nsec;
+      
+      document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+      }
+      
+      window.onload=function() {
+      GetClock();
+      setInterval(GetClock,1000);
+      }
+    </script>
     <div id="clockbox"></div>
     <div id="greeting">&rarr; Click Me &larr;</div>
-    <div id="personalizedTimeGreeting"><h2></h2></div>
+    <div id="personalizedTimeGreeting">
+      <h2></h2>
+    </div>
     <div id="slide-wrapper">
       <input type="button" id="imageDescriptionPrev" value="<">
       <input type="button" id="imageDescriptionNext" value=">">
@@ -66,41 +68,43 @@
       <div id="container">
         <div id="slideshowImage"><img src='img/0Red-Shoes-1198.jpg' width='600' height='400' /></div>
       </div>
-        <div id="descriptionContainer">
-          <div id="hint"><label for="tm" id="toggle-menu">Need a hint? Mouse over this text to reveal spoiler!</label></div>
-          <div id="quiz_description"></div>
-        </div>
+      <div id="descriptionContainer">
+        <div id="hint"><label for="tm" id="toggle-menu">Need a hint? Mouse over this text to reveal spoiler!</label></div>
+        <div id="quiz_description"></div>
       </div>
     </div>
+    </div>
     <div id="cookieGreeting">
-    <h3 id="headingGreeting">
-      Hi! Try to answer the questions below to find out how strong your movie knowledge base is!
-    </h3>
+      <h3 id="headingGreeting">
+        Hi! Try to answer the questions below to find out how strong your movie knowledge base is!
+      </h3>
     </div>
     <div>
       <h2 id="quiz_status"></h2>
       <h4 id="quiz_category"></h4>
-        <center>
-          <form>
-            <input size=5 id="timespent" name="timespent">
-          </form>
-        </center>
+      <center>
+        <form>
+          <input size=5 id="timespent" name="timespent">
+        </form>
+      </center>
       <div id="quiz"></div>
     </div>
     <div id="lastModified">
       <script>
-      if (Date.parse(document.lastModified) != 0) {
-          document.write('Last modified: ' + document.lastModified);
-      }
+        if (Date.parse(document.lastModified) != 0) {
+            document.write('Last modified: ' + document.lastModified);
+        }
       </script> 
     </div>
     <div id="update">Have a fantasy, mystery, or future noir film you'd like to see featured here? Any other suggestions you'd like to make? Edit the content below and save your edits. It's that easy!</div>
     <div id="edit" contenteditable="true">
-    Here is some original content to edit!
+      Here is some original content to edit!
     </div>
     <input type="submit" id="save" value="save my edits"/>
     <footer id="gamePage">
-      <p>&copy; 2015<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> &#8224; bsurreal &#8224; All Rights Reserved.</p>
+      <p>
+        &copy; 2015<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> &#8224; bsurreal &#8224; All Rights Reserved.
+      </p>
       <li><a href="#" class="scrollToTop"></a></li>
       <li><a href="faqs.html"> Privacy &amp; Terms</a></li>
       <div class="cc_banner cc_container cc_container--open">

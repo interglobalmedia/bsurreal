@@ -226,6 +226,10 @@ DropDown Menu
   color: #be5b70;
 }
 
+#menu a.active {
+  background: #2e2728;
+}
+
 #menu .sub-menu {
   display: none;
 }

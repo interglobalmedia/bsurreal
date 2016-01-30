@@ -6,7 +6,6 @@ $('.menu-btn').click(function() {
 
 
 // Back to top scroll button
-
 $(document).ready(function() {
   // Check to see if the window is at the top and if not then display the button
 
@@ -27,7 +26,6 @@ $(document).ready(function() {
 });
 
 // CC Container Collapse
-
 $(".cc_btn").click(function() {
   $(".cc_container").toggle();
 });

@@ -56,6 +56,12 @@ var questions = [
   ["What was the name of the male 'antagonist' in the movie?", "Harry Powell", "Mark Lewis", "Charlie Oakley", "Jack Wilson", "A", "Mystery", "Did you know that Dutch-born American serial killer Harry Powers (born Herman Drenth) was the inspiration for the role of the Preacher?"]
 ];
 
+/* Am saving this object for next project. Didn't expect to want to filter categories. Meant for all questions to be within one quiz. This particular
+project is the seed for the next one, which I will do differently regarding how questions are set up. Will be with text boxes as opposed to radio buttons.
+Already have that template set up. Will deal with the images a bit differently too. Am looking forward to using lodash 
+and furthering my knowledge and development of objects. (January 29, 2016) */
+
+//Begin-->
 var questionsObjects = [];
 for(var i = 0; i < questions.length; i++)
 {
@@ -84,6 +90,8 @@ function filterByCategory(category)
     return o.category === category;
   });
 }
+
+// End-->
 
 // returns the document.getElementById() reference to scripts whenever needed. Returns the object reference for the id string.
 function _(x) {

@@ -679,12 +679,12 @@ input[type=text] {
 div#update {
   border-top: 3px solid #3e3436;
   margin-top: 1.5%;
-  padding: 1% 0 1% 5%;
+  padding: 1% 5%;
 }
 
 div#edit {
   border-bottom: 3px solid #3e3436;
-  padding: 1% 0 1% 5%;
+  padding: 1% 5%;
 }
 
 input#edit {

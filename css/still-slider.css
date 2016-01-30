@@ -674,6 +674,8 @@ input[type=text] {
 
 #edit {
   outline: none;
+  border-bottom: 3px solid #3e3436;
+  cursor: pointer;
 }
 
 div#update {
@@ -687,9 +689,11 @@ div#edit {
   padding: 1% 5%;
 }
 
-input#edit {
-  margin: 1.5% 0 0 5%;
+input#save {
+  margin: 1.5% 0 0 1.5%;
   border: 3px solid #3e3436;
+  cursor: pointer;
+  background: #fff;
 }
 @media screen and (max-width: 479px) {
 

@@ -42,10 +42,41 @@ function getSecs() {
     var tSecs = Math.round(initStopwatch());
     var iSecs = tSecs % 60;
     var iMins = Math.round((tSecs-30)/60);
-    var sSecs ="" + ((iSecs > 9) ? iSecs : "0" + iSecs);
-    var sMins ="" + ((iMins > 9) ? iMins : "0" + iMins);
+    var sSecs = "" + ((iSecs > 9) ? iSecs : "0" + iSecs);
+    var sMins = "" + ((iMins > 9) ? iMins : "0" + iMins);
     document.getElementById("timespent").value = sMins+":"+sSecs;
     window.setTimeout('getSecs()',1000);
 }
 initStopwatch();
 getSecs();
+
+// Allowing Users to Edit Text Content with HTML5
+
+function saveEdits() {
+
+//get the editable element
+var editElem = document.getElementById("edit");
+
+//get the edited element content
+var userVersion = editElem.innerHTML;
+
+//save the content to local storage
+localStorage.userEdits = userVersion;
+
+//write a confirmation to the user
+document.getElementById("update").innerHTML = "Edits saved!";
+
+}
+
+savEdits();
+
+// Check Edits
+
+function checkEdits() {
+
+//find out if the user has previously saved edits
+  if(localStorage.userEdits!=null) {
+    document.getElementById("edit").innerHTML = localStorage.userEdits;
+  }
+}
+checkEdits();

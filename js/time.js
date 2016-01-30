@@ -51,7 +51,6 @@ initStopwatch();
 getSecs();
 
 // Code for contenteditable/localStorage
-
 var theContent = $('#edit');
  
 $('#save').on('click', function(){

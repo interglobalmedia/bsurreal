@@ -32,3 +32,9 @@ $(".cc_btn").click(function() {
   $(".cc_container").toggle();
 });
 
+// Clear the input text field after clicking the submit button
+
+$('#save').click(function(){
+  $('input[type="text"]').val(0);
+});
+

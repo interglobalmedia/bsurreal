@@ -80,7 +80,8 @@ h4 {
   margin: 0 1.5%;
 }
 
-/* Styling For #greeting above #personalizedTimeGreeting that player clicks on to hide the #personalizedTimeGreeting */
+/* Styling For #greeting above #personalizedTimeGreeting 
+that player clicks on to hide the #personalizedTimeGreeting */
 
 #greeting {
   background: #be5b70;
@@ -320,12 +321,20 @@ in hamburger.js
 .close {
   visibility: hidden;
 }
-/***********************
+/***************************
 Auto/Next/Prev Slider CSS
 jQuery and Javascript
 code can be found in
 slider.js
-************************/
+This slider does not appear
+in the bsurreal angular
+project, but was a part of
+the original iteration of it
+simply called bsurreal. I 
+didn't want to get rid of
+the styling in case if I do
+want to add it in the future.
+*****************************/
 
 #slide-wrapper {
   max-height: 800px;
@@ -392,7 +401,15 @@ button {
 
 /* Next and Prev Trivia Navigation 
 and some leftover 
-from auto slider buttons too */
+from auto slider buttons too
+I have actually hidden the Prev
+Next Trivia buttons because I wanted
+to disable the slider functionality.
+I didn't want people to be able to
+navigate through the slides. Again, however,
+I did not want to get rid of the feature
+as I might need it in future development
+of this game. */
 
 #prev {
   float: left;
@@ -418,13 +435,13 @@ Image Container, Img ID,
 Prev/Next Arrows Slider CSS
 jQuery and Javascript
 code can be found in
-still.js
+still-slider.js
 
 Desc Container, Desc ID,
 Prev/Next Arrows Slider CSS
 jQuery and Javascript
 code can be found in
-still.js
+still-slider.js
 ***************************/
 
 .intro {
@@ -475,7 +492,8 @@ still.js
   text-align: center;
 }
 
-/* Styling for "Click Me" located above SlideShow Image */
+/* Styling for "Click Me" 
+located above SlideShow Image */
 
 #clickImage {
   color: #be5b70;
@@ -673,6 +691,8 @@ input[type=text] {
 
 /* Styling for Editable Content Using Local Storage */
 
+/*Start*/
+
 #update,
 #edit {
   text-align: left;
@@ -711,6 +731,8 @@ input[type='submit'] {
 #save {
   outline: none;
 }
+
+/*Stop*/
 
 @media screen and (max-width: 479px) {
 

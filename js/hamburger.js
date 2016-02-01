@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 });
 
-// CC Container Collapse
+// CC Container Collapse for the Cookie Banner at bottom of page
 $(".cc_btn").click(function() {
   $(".cc_container").toggle();
 });

@@ -1,29 +1,30 @@
-Upadate 1.27.15: I have added categories to my quuestions so that players know what kind of movies they are answering questions about, but it also is meant to help me filter and organize my questions. Especially as relates to my navigation menu. I'm hoping to be able to associate categories with navigation menu tab classes. I have also achieved a certain level of cookies and will add more cookie functionality and customization today. The only other thing left to do that I consider a must is the grouping of movie categories within associated navigation men u links so that they appear on the page when certain links are selected. IF I have time, I will also add a little Sass, and then will probably expand on that beyond the course. I would really like to make something of this site! NOTE: these notes were taken from the original bsurreal website project. This repo is simply a compressed version of the original. I also will NOT be using Angular after all for this particular iteration because there is not enough time and there was already too much going on that was also set up in a certain way. In addition, I really wanted to use regular JavaScript here before leaping into something like Angular. It's nice to use the regular JS code. Makes for a better fundamental understanding before moving on to frameworks.
-Update 1.15.16: Added percentCorrect: Check. Then document.location.replace() replacing current page with another. But when I did that, I realized that I had to delay replacement of the page, otherwise the player would not see his/her score! So with setTimeOut() encapsulated around document.lcoation.replace(), I set a time delay of 1.5 seconds. Works perfectly! Now to add this functionality to the rest of the quizes.s
+BSurreal Movie Trivia Game
 
-Update 1.15.16: New interactive functionalities I would like to add to this trivia game:
-1. Each quiz is completed at percent correct and number correct. When quiz is completed and all that is done, replace current page link
-   with next quiz page link without "leaving" the page. Similar to replacing one image with another. (done)
-2. Use cookies to track player quiz status on the site. (almost complete)
-3. Add a quiz that utilizes text boxes for answers instead of radio buttons. (done, but does not appear here. It's on the original bsurreal. I will be moving it into small demo repo unto itself).
-4. A modal pops up when the player gets the question right or wrong. Still have number correct and percent correct at end of quiz. (doubt it before the end of class. Will implement afterwards).
-5. Still replace current page link with next quiz page linke without "leaving" page.
-6. Continue to perfect the terms page and possibly even revisit the index page. (Have removed the terms page here, because added a cookie banner to the bottom of page which makes for freeing up page space and makes a terms page no longer necessary. Also, my cookies info will appear on the FAQs page. I have added a prompt that asks the visitor to fill in a name so that they can make use of cookies to track what they have done on the site! Found a way of implementing that. Will add it to project today (1.27.16)).
-7. I would like to create a fixed bar at the bottom of the site footer that has social media links similar to what Popcorn 
-   Garage did on their site and what I have done on WordPress sites of my own. I think it's a great thing to be able to build. (Don't have space for this nor does it make sense for the current website design. Ergo, modal would be the way to go).
-8. I also want to add audio. I think this is a must taking music that I am able to take from movies or at least that sounds like it could have 
-   come from a movie.(This is a longer term addition I can add after the course is over).
+FAQs and Cookies
 
-This is a project I started in my Web Development 100 class. I loved the concept and what I was trying to achieve so much, that I am continuing to build upon this game. What I love about it is that it is chellenging me to utilize what I have been learning in "theory" by putting it into practice here.
+bsurreal is an interactive movie trivia game created with JavaScript, jQuery, and (JavaScript/jQuery) cookies.
 
-This is how things have developed so far (12.4.15):
+I have created various dynamic and interactive effects throughout the site which are meant to encourage the user to interact with the web page while answering questions to a quiz.
 
-1. When I first created this movie game, I was sure of how I wanted to approach certain things, and not so sure with others.
-    a) I knew that I wanted to create a radio button quiz game, but at first I didn't know how to go about it. I did extensive research and 
-    a lot of Javascript and jQuery exercises and tutorials through Codecademy, Treehouse, took from what I learned in class, and searched for good tutorials online which could teach me specifically more about quizes. After much study, I was able to create a simple and short quiz that would be associated with a single quiz page. Then, because of the way it was set up, I thought I could tie in the 4 quizes (pages) that I had created and have one big quiz that would connect from one page to the other. Well, that didn't work. I also found, however, that people most probably wouldn't want to necessarily have one long quiz to deal with, so I went back to my original concept of one self contained quiz per page. Right now I have 4-6 questions per quiz. That's about what people I think can handle at one time. I will set my max to 10 questions per quiz.
+I highly suggest engaging in the use of cookies to personalize the user experience during the game and/or while visiting the site. All it takes is to input a first and last name, first name only, or anonymous username the user will easily remember upon the next visit to the site.
 
-    b) Then, because I have set up self contained quizes with their own separate js files, i.e., slider.html which is the first slider game page, has it's own quiz1.js file. The still html pages I have do not have the same slider.js file that the slider html pages have, because I removed the slider from the still html pages replacing it with still images with interactivity built in. However, I did this because I didn't want to have a slider again, but I also didn't know how I wanted to set up the stills on the page. I was trying to create a visual "film reel" effect, but I don't think that's practical. The less people have to scroll down a page, the better. I even changed the layout of the slider html pages where I have the multiple choice radio button quizes because it was 1) easier and better UI UX experience for the player (they stay in one place), and it 2) made for more effecient Javascript code. Now One questions melds into the next, and I am able to return the total number of correct answers to the player at the same time.
+All the user has to do is fill out his/her name in the form below and hit the submit button. A cookie is set in memory upon submit.
 
-    c) What I found down the line I really wanted to do with the stills was to place one image on top of another just like in the slider, with a combination of absolute and fixed positioning. So I have started working on this piece of the game today. Again, it will involved arrays! The other thing I will be doing here is to place the images on the html page via Javascript and not directly on the html page itself, just I had done using .innerHTML for the quizes. The code and the markup is just cleaner that way, AND it makes for better control of the elements. Especially if I want to make changes down the road.
+Don't want to be staring at the time-based greeting at the top of the page? Just click on the pink band with the words "Click Me" and it will immediately disappear!
 
-    d) Since isolating my Javascript to one file per slider quiz page made my life so much easier and organized, I will be doing the same thing with the stills. I will be starting work on that today as well. In fact, I will be starting with this first, and then going on to re-arranging the layout of the still html pages and making adjustments in the code for a completely different interactive experience than what I have now (the film reel experience). - new still.js file created (12.4.15). Relevant code removed from slider.js.
+Don't want to be staring at the greeting that appears above the movie category? Click on the movie image once, and it will disappear. Click on it a second time, and it will reappear!
+
+Depending on the number of visits, the user will be greeted with a different friendly and personalized greeting.
+
+The site keeps track of the current date and time. The time is kept by a dynamic clock which displays the local time and updates every second. It also doesn't rely on page re-loads or refreshes to advance.
+
+The site keeps track of site updates. When a user lands on the page, he/she will be able to tell whether or not there have been any changes since his/her last visit.
+
+There is a "stopwatch" on the Quiz Page which starts ticking when the user lands on it. When the user is ready to leave, he/she will know how much time has been spent on the . It could also be (loosely) used as a timer!
+
+Each time after the user answers a question, a line of text will return moving the question location forward 1 number. For example, if the user has just started the game and has only answered one question, he/she will be prompted with "Question 1 of X". After answering two questions, he/she will be prompted with "Question 2 of X", and so on.
+
+When the user has finished the the quiz, he/she will be told how many questions were answered correctly and what was his/her percentage of correct answers. Keep in mind that the score is only revealed upon completion of the quiz! Click on any tab in the navigation menu (except the Exit tab of course!) to get started. Enjoy the game!
+
+I left the best (and the most experimental) to last. Below the quiz questions is an "editablecontent" area. There, the user can take notes about the quiz, make comments about his/her user experience, or make suggestions about how I may improve the site! Edits made in one browser will not appear in another. These are localStorage edits, and they are stored to whichever browser the user saved the edits to.
+

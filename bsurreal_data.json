@@ -1,3 +1,8 @@
+//I was going to add angular to this project, but it didn't make sense given that I was
+// already deep into it and the way it was configured, which made sense for what I wanted to
+// accomplish anyway. However, I will be doing another quiz game which I will set up
+// differently from the beginning using objects, so I wanted to keep this template here
+// for reference!
 [
   {
     "categories" :[

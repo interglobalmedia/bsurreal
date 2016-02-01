@@ -28,3 +28,4 @@ When the user has finished the the quiz, he/she will be told how many questions 
 
 I left the best (and the most experimental) to last. Below the quiz questions is an "editablecontent" area. There, the user can take notes about the quiz, make comments about his/her user experience, or make suggestions about how I may improve the site! Edits made in one browser will not appear in another. These are localStorage edits, and they are stored to whichever browser the user saved the edits to.
 
+You can view and/or play the game at http://interglobalmedia.github.io/bsurreal-angular

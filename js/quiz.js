@@ -5,6 +5,9 @@ $(document).ready(function() {
   // hide the #quiz_description that appears below the image
   $($quiz_description).hide();
   // toggle the component with id of #quiz_description by clicking on element with id of #hint
+  // Use .necxt() method which gets the immediately following sibling of each element in the set 
+  // of matched elements. If a selector is provided, it retrieves the next sibling only if it matches 
+  // that selector.
   $($hint).on("mouseenter", function() {
     $(this).next($quiz_description).slideDown(600);
   });
@@ -143,7 +146,7 @@ function renderQuestion() {
   quiz.innerHTML += '</form>';
 }
 
-  // Need code that will look through name group of choices variablethat was initialized earlier to see which one the player selected.
+  // Need code that will look through name group of choices variable that was initialized earlier to see which one the player selected.
   // document.getElementsByName() results in an array.
   // 
 function checkDescription() {
@@ -175,5 +178,9 @@ function checkAnswer() {
     renderQuestion();
     next();
 }
+// referencing renderQuestion() call back with renderQuestion so that function is called after the window
+// has loaded. A Boolean of false means that renderQuestion is not iMMEDIATELY loaded, but only after window is loaded.
+// Also, omitting parentheses after renderQuestion makes it a reference to the callback rather than a callback. If a 
+// callback is placed, the function would fire immediately.
 window.addEventListener("load", renderQuestion, false);
 

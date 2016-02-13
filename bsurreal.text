@@ -1,3 +1,16 @@
+Note from Nicole re suggestions along with grading of this project(10/100%!):
+
+  No worries! I know you did it! :-) It was awesome having you in class, and you did a great job on this project!
+
+  Some notes:
+  - you have a console error coming from time.js- it's looking for something w/ the id #timespent, and not finding it?
+  - you could use $('input[name=nameinput]').val() to get the value out of the nameinput textbox, so you don't have to pop up an additional prompt
+  - you can use jQuery to get elements by there id, instead of your _ function (also, I wouldn't name a function _, because libraries like lodash and underscore use it)
+  - next steps: look into the JavaScript module pattern (http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html) for tips on how to organize larger projects
+
+  Great job!!! :-)
+  _________________________________________________________________________________________________
+  
 Update 2.1.16: Decided at the last minute NOT to add angular to this project. I was
 already deep into it and the way it was configured, which made sense for what I wanted to
 accomplish anyway. However, I will be doing another quiz game which I will set up

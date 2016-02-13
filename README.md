@@ -29,3 +29,5 @@ When the user has finished the the quiz, he/she will be told how many questions 
 I left the best (and the most experimental) to last. Below the quiz questions is an "editablecontent" area. There, the user can take notes about the quiz, make comments about his/her user experience, or make suggestions about how I may improve the site! Edits made in one browser will not appear in another. These are localStorage edits, and they are stored to whichever browser the user saved the edits to.
 
 You can view and/or play the game at http://interglobalmedia.github.io/bsurreal-angular
+
+Note: This is NOT an angular-based project. Originally, I was going to implement angular because I had just created another quiz using Angular and thought that it would be great to add to this project. However, I was too deep into it at the time and also had a time constraint, so it didn't happen. However, I had already called the repo bsurreal-angular, so I was stuck with the name! There will be upcoming Angular projects, so be sure to check in!
